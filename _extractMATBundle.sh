@@ -2,7 +2,8 @@
 #DO NOT EDIT WITH WINDOWS
 tooling_jar=tooling-cli-3.6.0.jar
 input_cache_path=./input-cache
-mat_bundle=./bundles/mat/CMS1028FHIR-v0.1.000-FHIR4/CMS1028FHIR-v0.1.000-FHIR.json
+# mat_bundle=./bundles/mat/CMS1028FHIR-v0.1.000-FHIR4/CMS1028FHIR-v0.1.000-FHIR.json
+mat_bundle=./bundles/mat/CMS138FHIR-v0.0.001-FHIR4/CMS138FHIR-v0.0.001-FHIR.json
 
 set -e
 

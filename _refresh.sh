@@ -10,7 +10,8 @@ wget -q --spider tx.fhir.org
 
 if [ $? -eq 0 ]; then
 	echo "Online"
-	fsoption="-fs=https://fhir.ecqm.icfcloud.com/fhir"
+	# fsoption="-fs=https://fhir.ecqm.icfcloud.com/fhir"
+	fsoption=""
 else
 	echo "Offline"
 	fsoption=""
@@ -20,12 +21,12 @@ echo "$fsoption"
 
 tooling=$input_cache_path/$tooling_jar
 if test -f "$tooling"; then
-	java -jar $tooling -RefreshIG -ini="$ig_ini_path" -d -p -t -mf $fsoption
+	java -jar $tooling -RefreshIG -ini="$ig_ini_path" -d -p -t -x $fsoption
 else
 	tooling=../$tooling_jar
 	echo $tooling
 	if test -f "$tooling"; then
-		java -jar $tooling -RefreshIG -ini="$ig_ini_path" -d -p -t $fsoption
+		java -jar $tooling -RefreshIG -ini="$ig_ini_path" -d -p -t -x $fsoption
 	else
 		echo IG Refresh NOT FOUND in input-cache or parent folder.  Please run _updateCQFTooling.  Aborting...
 	fi

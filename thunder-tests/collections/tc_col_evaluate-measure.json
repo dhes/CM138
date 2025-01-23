@@ -1,0 +1,122 @@
+{
+    "_id": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
+    "colName": "evaluate-measure",
+    "created": "2025-01-22T20:18:01.886Z",
+    "sortNum": 20000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a1e83dc7-96dc-46c7-9040-9f88073595bd",
+            "colId": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
+            "containerId": "",
+            "name": "evaluate-measure population",
+            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?periodStart=2024-01-01&periodEnd=2024-12-31&report-type=population",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-01-22T20:19:02.675Z",
+            "modified": "2025-01-22T20:27:12.001Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "periodStart",
+                    "value": "2024-01-01",
+                    "isPath": false
+                },
+                {
+                    "name": "periodEnd",
+                    "value": "2024-12-31",
+                    "isPath": false
+                },
+                {
+                    "name": "report-type",
+                    "value": "population",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "5848deae-45af-4f87-bf7d-5916edc584e5",
+            "colId": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
+            "containerId": "",
+            "name": "evaluate-measure subject tus-screened",
+            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?periodStart=2024-01-01&periodEnd=2024-12-31&subject=Patient/tus-screened",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-01-23T02:09:47.157Z",
+            "modified": "2025-01-23T02:10:13.859Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "periodStart",
+                    "value": "2024-01-01",
+                    "isPath": false
+                },
+                {
+                    "name": "periodEnd",
+                    "value": "2024-12-31",
+                    "isPath": false
+                },
+                {
+                    "name": "subject",
+                    "value": "Patient/tus-screened",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "ee956403-7dfe-4d0e-a660-ded90f43ed1e",
+            "colId": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
+            "containerId": "",
+            "name": "care-gaps",
+            "url": "Measure/$care-gaps?periodStart=2024-01-01&periodEnd=2024-12-31&status=open-gap&status=closed-gap&subject=Patient/tus-not-screened&measureId=PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-01-23T02:25:57.806Z",
+            "modified": "2025-01-23T02:27:58.206Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "periodStart",
+                    "value": "2024-01-01",
+                    "isPath": false
+                },
+                {
+                    "name": "periodEnd",
+                    "value": "2024-12-31",
+                    "isPath": false
+                },
+                {
+                    "name": "status",
+                    "value": "open-gap",
+                    "isPath": false
+                },
+                {
+                    "name": "status",
+                    "value": "closed-gap",
+                    "isPath": false
+                },
+                {
+                    "name": "subject",
+                    "value": "Patient/tus-not-screened",
+                    "isPath": false
+                },
+                {
+                    "name": "measureId",
+                    "value": "PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "settings": {
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/fhir+json"
+            }
+        ],
+        "options": {
+            "baseUrl": "{{FHIR_SERVER_URL}}"
+        }
+    }
+}

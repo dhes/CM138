@@ -4,12 +4,12 @@ Incremented QICoreCommon and FHIRHelpers version
 Created Fluent functions for all relevant functions
 */
 
-library CumulativeMedicationDuration version '5.0.000'
+library CumulativeMedicationDuration version '4.1.000'
 
-using QICore version '6.0.0'
+using QICore version '4.1.1'
 
 include FHIRHelpers version '4.4.000'
-include QICoreCommon version '3.0.000'
+include QICoreCommon version '2.1.000'
 
 // These code systems are not known to the MAT environment yet, request to have them added submitted
 codesystem "V3TimingEvent": 'http://terminology.hl7.org/CodeSystem/v3-TimingEvent'
