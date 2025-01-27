@@ -1,0 +1,27 @@
+{
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "name",
+          "valueCoding": {
+            "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext",
+            "code": "observation"
+          }
+        },
+        {
+          "url": "type",
+          "valueCode": "Observation"
+        }
+      ],
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext",
+      "valueExpression": {
+        "language": "application/x-fhir-query",
+        "expression": "Observation?subject=Patient/tus-screened&code=72166-2&_sort=-date&_count=1"
+      }
+    }
+  ]
+}

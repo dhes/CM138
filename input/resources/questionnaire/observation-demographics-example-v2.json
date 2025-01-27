@@ -1,0 +1,183 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "observation-demographics-example-v2",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn"
+    ]
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "name",
+          "valueCoding": {
+            "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext",
+            "code": "patient"
+          }
+        },
+        {
+          "url": "type",
+          "valueCode": "Patient"
+        }
+      ],
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext",
+      "valueExpression": {
+        "language": "application/x-fhir-query",
+        "expression": "Patient?_id={{%25patient.id}}"
+      }
+    }
+  ],
+  "item": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+          "valueBoolean": true
+        },
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+          "valueExpression": {
+            "language": "text/fhirpath",
+            "expression": "%patient.id"
+          }
+        }
+      ],
+      "linkId": "patient.id",
+      "definition": "Patient.id",
+      "text": "(internal use)",
+      "type": "string",
+      "readOnly": true
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+          "valueExpression": {
+            "language": "text/fhirpath",
+            "expression": "%patient.birthDate"
+          }
+        }
+      ],
+      "linkId": "patient.birthDate",
+      "definition": "Patient.birthDate",
+      "text": "Date of birth",
+      "type": "date",
+      "required": true
+    },
+    {
+      "linkId": "patient.name",
+      "definition": "Patient.name",
+      "text": "Name(s)",
+      "type": "group",
+      "repeats": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%patient.name.family"
+              }
+            }
+          ],
+          "linkId": "patient.name.family",
+          "definition": "Patient.name.family",
+          "text": "Family name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%patient.name.given"
+              }
+            }
+          ],
+          "linkId": "patient.name.given",
+          "definition": "Patient.name.given",
+          "text": "Given name(s)",
+          "type": "string",
+          "required": true,
+          "repeats": true
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+          "valueExpression": {
+            "name": "smokingStatus",
+            "language": "application/x-fhir-query",
+            "expression": "Observation?subject={{%25patient.id}}&code=72166-2&_sort=-date&_count=1"
+          }
+        }
+      ],
+      "linkId": "smokingStatus",
+      "text": "Current smoking status",
+      "type": "group",
+      "repeats": false,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%smokingStatus.exists() ? %smokingStatus.valueCodeableConcept.coding.display.first() : ''"
+              }
+            }
+          ],
+          "linkId": "smokingStatus.display",
+          "definition": "Observation.valueCodeableConcept.coding.display",
+          "text": "Status",
+          "type": "string",
+          "readOnly": true,
+          "repeats": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%smokingStatus.exists() ? %smokingStatus.valueCodeableConcept.coding.system : ''"
+              }
+            }
+          ],
+          "linkId": "smokingStatus.system",
+          "definition": "Observation.valueCodeableConcept.coding.system",
+          "text": "Terminology system",
+          "type": "string",
+          "readOnly": true,
+          "repeats": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+              "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "%smokingStatus.exists() ? %smokingStatus.valueCodeableConcept.coding.code : ''"
+              }
+            }
+          ],
+          "linkId": "smokingStatus.code",
+          "definition": "Observation.valueCodeableConcept.coding.code",
+          "text": "Code",
+          "type": "string",
+          "readOnly": true,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

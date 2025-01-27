@@ -1,0 +1,24 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "populate-example",
+  "url": "http://example.org/fhir/Questionnaire/populate-example",
+  "title": "Pre-Filled Patient Name",
+  "status": "active",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+      "valueCanonical": "http://example.org/fhir/Library/populate-logic"
+    }
+  ],
+  "item": [
+    {
+      "linkId": "patient-name",
+      "text": "Patient's Name",
+      "type": "string",
+      "initialExpression": {
+        "language": "text/fhirpath",
+        "expression": "Patient.name.given.first()"
+      }
+    }
+  ]
+}

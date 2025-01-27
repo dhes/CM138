@@ -1,0 +1,17 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "pre-filled-example",
+  "title": "Pre-Filled Patient Name",
+  "status": "active",
+  "item": [
+    {
+      "linkId": "patient-name",
+      "text": "Patient's Name",
+      "type": "string",
+      "initialExpression": {
+        "language": "text/fhirpath",
+        "expression": "Patient.name.given.first()"
+      }
+    }
+  ]
+}	

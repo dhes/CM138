@@ -1,0 +1,53 @@
+{
+  "resourceType": "StructureMap",
+  "id": "populate-tobacco-use",
+  "url": "http://example.org/fhir/StructureMap/populate-tobacco-use",
+  "version": "1.0",
+  "name": "PopulateTobaccoUseScreening",
+  "status": "active",
+  "date": "2025-01-23",
+  "publisher": "Example Health Organization",
+  "group": [
+    {
+      "name": "ObservationToQuestionnaireResponse",
+      "typeMode": "types",
+      "input": [
+        {
+          "name": "obs",
+          "type": "Observation",
+          "mode": "source"
+        },
+        {
+          "name": "qr",
+          "type": "QuestionnaireResponse",
+          "mode": "target"
+        }
+      ],
+      "rule": [
+        {
+          "name": "MapObservationToTobaccoUseStatus",
+          "source": [
+            {
+              "context": "obs",
+              "element": "code.coding.code",
+              "check": "72166-2",
+              "condition": "obs.valueCodeableConcept.coding.code in 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1189'"
+            }
+          ],
+          "target": [
+            {
+              "context": "qr",
+              "element": "item.where(linkId='tobacco-use-status').text",
+              "transform": "copy",
+              "parameter": [
+                {
+                  "value": "obs.valueCodeableConcept"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

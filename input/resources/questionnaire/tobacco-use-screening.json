@@ -1,0 +1,71 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "tobacco-use-screening",
+  "url": "http://example.org/fhir/Questionnaire/tobacco-use-screening",
+  "version": "1.0",
+  "name": "TobaccoUseScreening",
+  "title": "Tobacco Use Screening Questionnaire",
+  "status": "active",
+  "publisher": "Example Health Organization",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+      "valueCanonical": "http://example.org/fhir/StructureMap/populate-tobacco-use"
+    }
+  ],
+  "date": "2025-01-23",
+  "description": "A questionnaire to assess the tobacco use status of a patient.",
+  "subjectType": ["Patient"],
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "custom-tobacco-use-status",
+      "url": "http://example.org/fhir/ValueSet/custom-tobacco-use-status",
+      "version": "1.0",
+      "name": "CustomTobaccoUseStatus",
+      "title": "Custom Tobacco Use Status",
+      "status": "active",
+      "description": "A simplified ValueSet for tobacco use screening, containing a single option for tobacco user and non-user.",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "77176002",
+                "display": "Smoker (finding)"
+              },
+              {
+                "code": "8392000",
+                "display": "Non-smoker (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "linkId": "tobacco-use-status",
+      "text": "This patient is a ....",
+      "type": "choice",
+      "required": true,
+      "answerValueSet": "http://example.org/fhir/ValueSet/custom-tobacco-use-status",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop-down"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

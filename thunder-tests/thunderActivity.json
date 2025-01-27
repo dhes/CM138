@@ -1,0 +1,21 @@
+[
+    {
+        "_id": "d866dd44-f8c4-4bc1-a470-c354d90a6453",
+        "colId": "history",
+        "containerId": "",
+        "name": "https://clinicaltables.nlm.nih.gov/api/conditions/v3/search?terms=diabetes",
+        "url": "https://clinicaltables.nlm.nih.gov/api/conditions/v3/search?terms=diabetes",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2025-01-24T23:15:03.997Z",
+        "modified": "2025-01-24T23:15:03.997Z",
+        "headers": [],
+        "params": [
+            {
+                "name": "terms",
+                "value": "diabetes",
+                "isPath": false
+            }
+        ]
+    }
+]

@@ -1,0 +1,52 @@
+{
+  "resourceType": "StructureMap",
+  "id": "tobacco-use-population",
+  "url": "http://example.org/StructureMap/tobacco-use-population",
+  "version": "1.0",
+  "name": "TobaccoUsePopulation",
+  "status": "active",
+  "date": "2025-01-24",
+  "publisher": "Example Health Organization",
+  "group": [
+    {
+      "name": "TobaccoUsePopulation",
+      "typeMode": "none",
+      "input": [
+        {
+          "name": "obs",
+          "type": "Observation",
+          "mode": "source"
+        },
+        {
+          "name": "qr",
+          "type": "QuestionnaireResponse",
+          "mode": "target"
+        }
+      ],
+      "rule": [
+        {
+          "name": "MapTobaccoUseStatus",
+          "source": [
+            {
+              "context": "obs",
+              "element": "valueCodeableConcept.coding.first()",
+              "variable": "valueCoding"
+            }
+          ],
+          "target": [
+            {
+              "context": "qr",
+              "element": "item.where(linkId='tobacco-use-status').answer",
+              "transform": "create",
+              "parameter": [
+                {
+                  "value": "valueCoding"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

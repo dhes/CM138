@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "id": "custom-tobacco-use-status",
+  "url": "http://example.org/fhir/ValueSet/custom-tobacco-use-status",
+  "version": "1.0",
+  "name": "CustomTobaccoUseStatus",
+  "title": "Custom Tobacco Use Status",
+  "status": "active",
+  "description": "A simplified ValueSet for tobacco use screening, containing a single option for tobacco user and non-user.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "77176002",
+            "display": "Smoker (finding)"
+          },
+          {
+            "code": "8392000",
+            "display": "Non-smoker (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

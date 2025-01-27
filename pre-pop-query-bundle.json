@@ -1,0 +1,21 @@
+{
+  "resourceType": "Bundle",
+  "id": "PrePopQuery",
+  "type": "batch",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:43c8e58d-099f-425c-a219-564266a518dc",
+      "request": {
+        "method": "GET",
+        "url": "Patient?_id=tus-screened"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:88f151c0-a954-468a-88bd-5ae15c08e060",
+      "request": {
+        "method": "GET",
+        "url": "Observation?patient=tus-screened&status=final"
+      }
+    }
+  ]
+}
