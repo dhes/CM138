@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "id": "task-code",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hapifhir.io/fhir/StructureDefinition/valueset-expansion-message",
+        "valueString": "ValueSet with URL \"ValueSet.url[http://hl7.org/fhir/uv/sdc/ValueSet/task-code]\" was expanded using an in-memory expansion"
+      }
+    ]
+  },
+  "url": "http://hl7.org/fhir/uv/sdc/ValueSet/task-code",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/temp",
+        "concept": [
+          {
+            "code": "complete-questionnaire"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/task-code",
+        "concept": [
+          {
+            "code": "fulfill"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "7b0f5c56-6f02-4034-80ad-78b305b4b844",
+    "timestamp": "2025-01-28T02:13:34+00:00",
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "offset",
+        "valueInteger": 0
+      },
+      {
+        "name": "count",
+        "valueInteger": 1000
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://hl7.org/fhir/CodeSystem/task-code",
+        "code": "fulfill",
+        "display": "Fulfill the focal request"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "entryMode",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hapifhir.io/fhir/StructureDefinition/valueset-expansion-message",
+        "valueString": "ValueSet with URL \"ValueSet.url[http://hl7.org/fhir/uv/sdc/ValueSet/entryMode]\" was expanded using an in-memory expansion"
+      }
+    ]
+  },
+  "url": "http://hl7.org/fhir/uv/sdc/ValueSet/entryMode",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/entryMode"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "97adcd7c-05e1-4c69-b7e8-e54fc2964d39",
+    "timestamp": "2025-01-28T02:12:47+00:00",
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "offset",
+        "valueInteger": 0
+      },
+      {
+        "name": "count",
+        "valueInteger": 1000
+      }
+    ]
+  }
+}

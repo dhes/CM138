@@ -1,0 +1,1052 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "OperationDefinition/Questionnaire-assemble"
+      },
+      "resource": {
+        "resourceType": "OperationDefinition",
+        "id": "Questionnaire-assemble",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Questionnaire-assemble</b></p><a name=\"Questionnaire-assemble\"> </a><a name=\"hcQuestionnaire-assemble\"> </a><a name=\"Questionnaire-assemble-en-US\"> </a><p>URL: [base]/Questionnaire/$assemble</p><p>URL: [base]/Questionnaire/[id]/$assemble</p><p>Input parameters Profile:<a href=\"StructureDefinition-sdc-questionnaire-modular.html\">SDC Modular Questionnaire</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>questionnaire</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a> | <a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a> | <a href=\"http://hl7.org/fhir/R4/questionnaire.html\">Questionnaire</a></td><td/><td><div><p>The <a href=\"StructureDefinition-sdc-questionnaire-modular.html\">Modular Questionnaire</a> to assemble the content of. Can be provided as a canonical for the questionnaire, a questionnaire reference, or directly as a questionnaire resource.</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The fully assembled <a href=\"StructureDefinition-sdc-questionnaire.html\">Questionnaire</a> with all subQuestionnaires inlined and all items with item.definitions have had relevant metadata propagated into the item.</p>\n</div></td></tr><tr><td>OUT</td><td>outcome</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The OperationOutcome indicating any warnings or information messages with the assembly process</p>\n</div></td></tr></table></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "fhir"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 4,
+            "_valueInteger": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use",
+            "_valueCode": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-assemble",
+        "version": "4.0.0-ballot",
+        "name": "SDCAssemble",
+        "title": "Assemble Modular Questionnaire Operation",
+        "status": "active",
+        "kind": "operation",
+        "date": "2024-12-22T03:48:38+00:00",
+        "publisher": "HL7 International / FHIR Infrastructure",
+        "contact": [
+          {
+            "name": "HL7 International / FHIR Infrastructure",
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          },
+          {
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          }
+        ],
+        "description": "The $assemble operation takes a modular questionnaire (one that references sub-questionnaires and/or relies on definition elements to contain the content for item definitions) and produces the equivalent fully-inline Questionnaire.  Full details on the process can be found [here](modular.html).",
+        "jurisdiction": [
+          {
+            "coding": [
+              {
+                "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                "code": "001",
+                "display": "World"
+              }
+            ]
+          }
+        ],
+        "code": "assemble",
+        "resource": [
+          "Questionnaire"
+        ],
+        "system": false,
+        "type": true,
+        "instance": true,
+        "inputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-modular",
+        "parameter": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "uri"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "Reference"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "Questionnaire"
+              }
+            ],
+            "name": "questionnaire",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The [Modular Questionnaire](StructureDefinition-sdc-questionnaire-modular.html) to assemble the content of. Can be provided as a canonical for the questionnaire, a questionnaire reference, or directly as a questionnaire resource.",
+            "type": "Element"
+          },
+          {
+            "name": "return",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "documentation": "The fully assembled [Questionnaire](StructureDefinition-sdc-questionnaire.html) with all subQuestionnaires inlined and all items with item.definitions have had relevant metadata propagated into the item.",
+            "type": "Resource"
+          },
+          {
+            "name": "outcome",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "documentation": "The OperationOutcome indicating any warnings or information messages with the assembly process",
+            "type": "Resource"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "OperationDefinition/Questionnaire-next-question"
+      },
+      "resource": {
+        "resourceType": "OperationDefinition",
+        "id": "Questionnaire-next-question",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Questionnaire-next-question</b></p><a name=\"Questionnaire-next-question\"> </a><a name=\"hcQuestionnaire-next-question\"> </a><a name=\"Questionnaire-next-question-en-US\"> </a><p>URL: [base]/Questionnaire/$next-question</p><p>Input parameters Profile:<a href=\"StructureDefinition-parameters-questionnaire-next-question-in.html\">Next question operation input parameters</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-parameters-questionnaire-next-question-out.html\">Next question operation output parameters</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>questionnaire-response</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The <a href=\"StructureDefinition-sdc-questionnaireresponse-adapt.html\">Adaptive QuestionnaireResponse Profile</a> of the QuestionnaireResponse resource with a <em>contained</em> Questionnaire.  When invoking the operation for the first time, neither the QuestionnaireResponse nor the contained Questionnaire will have any items, as no questions are yet known.  In subsequent calls, the QuestionnaireResponse will include answers to all required questions asked so far and the contained QuestionnaireResponse will remain the same as provided back from the operation in the preceding response.</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The <a href=\"StructureDefinition-sdc-questionnaireresponse-adapt.html\">Adaptive QuestionnaireResponse Profile</a> of the QuestionnaireResponse resource with a <em>contained</em> Questionnaire.  The Server updates the QuestionnaireResponse's contained Questionnaire by appending with the next question or questions items and any score or instruction items and returns the QuestionnaireResponse (with all answers completed thus far plus any calculated scores) as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to <code>complete</code>.</p>\n</div></td></tr></table><div><p>To return a calculated score for the questionnaire or group of items, the service may return a <code>readOnly</code> question with the score value in the corresponding QuestionnaireResponse.item.  The extension <code>questionnaire-hidden</code> can be included on the Questionnaire.item to indicate to the client that it should not be displayed to the end user</p>\n</div></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "fhir"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 4,
+            "_valueInteger": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use",
+            "_valueCode": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question",
+        "version": "4.0.0-ballot",
+        "name": "SDCNextQuestion",
+        "title": "Adaptive Questionnaire - Next Question Operation",
+        "status": "active",
+        "kind": "operation",
+        "date": "2018-08-29",
+        "publisher": "HL7 International / FHIR Infrastructure",
+        "contact": [
+          {
+            "name": "HL7 International / FHIR Infrastructure",
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          },
+          {
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          }
+        ],
+        "description": "The Next Question operation is used for *adaptive questionnaires* - forms where the next question (or set of questions) is based on previous answers.  The result of this operation is to return an updated QuestionnaireResponse with a contained Questionnaire that includes the next question (or set of questions).  It might also include display items with instructions and/or read-only questions containing calculated scores.  This operation uses the [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) resource with a [*contained*](http://hl7.org/fhir/R4/references.html#contained) [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) as both the input and output parameter. The client initiates and queries for the next question by including the answers to all required questions in the questionnaire to that point.  The Server updates the contained Questionnaire in the QuestionnaireResponse in the with the next question or set of questions and any needed instruction or score items.  When the questionnaire is complete, the Server updates the `QuestionnaireResponse.status` resource parameter to `complete`.  If completion of the questionnaire has exceeded any time limit, the Server may return an [OperationOutcome](http://hl7.org/fhir/R4/operationoutcome.html) with an error.",
+        "jurisdiction": [
+          {
+            "coding": [
+              {
+                "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                "code": "001",
+                "display": "World"
+              }
+            ]
+          }
+        ],
+        "code": "next-question",
+        "comment": "To return a calculated score for the questionnaire or group of items, the service may return a `readOnly` question with the score value in the corresponding QuestionnaireResponse.item.  The extension `questionnaire-hidden` can be included on the Questionnaire.item to indicate to the client that it should not be displayed to the end user",
+        "resource": [
+          "Questionnaire"
+        ],
+        "system": false,
+        "type": true,
+        "instance": false,
+        "inputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaire-next-question-in",
+        "outputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaire-next-question-out",
+        "parameter": [
+          {
+            "name": "questionnaire-response",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The [Adaptive QuestionnaireResponse Profile](StructureDefinition-sdc-questionnaireresponse-adapt.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  When invoking the operation for the first time, neither the QuestionnaireResponse nor the contained Questionnaire will have any items, as no questions are yet known.  In subsequent calls, the QuestionnaireResponse will include answers to all required questions asked so far and the contained QuestionnaireResponse will remain the same as provided back from the operation in the preceding response.",
+            "type": "Resource"
+          },
+          {
+            "name": "return",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "The [Adaptive QuestionnaireResponse Profile](StructureDefinition-sdc-questionnaireresponse-adapt.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The Server updates the QuestionnaireResponse's contained Questionnaire by appending with the next question or questions items and any score or instruction items and returns the QuestionnaireResponse (with all answers completed thus far plus any calculated scores) as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to `complete`.",
+            "type": "Resource"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "OperationDefinition/Questionnaire-populate"
+      },
+      "resource": {
+        "resourceType": "OperationDefinition",
+        "id": "Questionnaire-populate",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Questionnaire-populate</b></p><a name=\"Questionnaire-populate\"> </a><a name=\"hcQuestionnaire-populate\"> </a><a name=\"Questionnaire-populate-en-US\"> </a><p>URL: [base]/Questionnaire/$populate</p><p>URL: [base]/Questionnaire/[id]/$populate</p><p>Input parameters Profile:<a href=\"StructureDefinition-parameters-questionnaire-populate-in.html\">Populate operation input parameters</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-parameters-questionnaire-populate-out.html\">Populate operation output parameters</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>A logical questionnaire identifier (i.e. <code>Questionnaire.identifier</code>). The server must know the questionnaire or be able to retrieve it from other known repositories.</p>\n</div></td></tr><tr><td>IN</td><td>questionnaire</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a> | <a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a> | <a href=\"http://hl7.org/fhir/R4/questionnaire.html\">Questionnaire</a></td><td/><td><div><p>The Questionnaire to populate the response. Can be provided as a canonical for the questionnaire, a questionnaire reference, or directly as a questionnaire resource.</p>\n</div></td></tr><tr><td>IN</td><td>subject</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a></td><td/><td><div><p>The resource that is to be the <em>QuestionnaireResponse.subject</em>. The <a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\">QuestionnaireResponse</a> instance will reference the provided subject.  In addition, if the <em>local</em> parameter is set to true, server information about the specified subject will be used to populate the instance.</p>\n</div></td></tr><tr><td>IN</td><td>context</td><td/><td>0..*</td><td></td><td/><td><div><p>Resources containing information to be used to help populate the <a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\">QuestionnaireResponse</a>.  These will typically be FHIR resources, though alternative population mechanisms might allow consumption of binaries containing FHIR documents, CDA documents or other source materials.  Servers might not support all possible source materials and may ignore materials they do not recognize.  (They MAY provide warnings if ignoring submitted resources.)</p>\n</div></td></tr><tr><td>IN</td><td>context.name</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>The name of the launchContext or root Questionnaire variable the passed content should be used as for population purposes.  The name SHALL correspond to a launchContext or variable declared at the root of the Questionnaire. Allowed names include 'sourceQueries', which specifies that the context is the results of executing the queries in the sdc-questionnaire-sourceQueries extension.</p>\n</div></td></tr><tr><td>IN</td><td>context.content</td><td/><td>1..*</td><td><a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a> | <a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The actual resource (or resources) to use as the value of the launchContext or variable. The content should be provided as a resource if the server performing the population may not have access to the content or the content is not available for RESTful retrieval (e.g. it's a search-response Bundle).</p>\n</div></td></tr><tr><td>IN</td><td>local</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>If specified and set to <code>true</code> (and the server is capable), the server should use what resources and other knowledge it has about the referenced subject when pre-populating answers to questions.</p>\n</div></td></tr><tr><td>OUT</td><td>response</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\">QuestionnaireResponse</a></td><td/><td><div><p>The partially (or fully)-populated set of answers for the specified Questionnaire</p>\n</div></td></tr><tr><td>OUT</td><td>issues</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/operationoutcome.html\">OperationOutcome</a></td><td/><td><div><p>A list of hints and warnings about problems encountered while populating the questionnaire. These might be show to the user as an advisory note. Note: if the questionnaire cannot be populated at all, then the operation should fail, and an OperationOutcome is returned directly with the failure, rather than using this parameter</p>\n</div></td></tr></table><div><p>While it is theoretically possible for a <a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\">QuestionnaireResponse</a> instance to be completely auto-populated and submitted without human review, the intention of this transaction is merely to reduce redundant data entry.  A client <strong>SHOULD</strong> ensure that a human submitter has an opportunity to review the auto-populated answers to confirm correctness as well as to complete or expand on information provided by the auto-population process.  When creating an &quot;empty&quot; questionnaire, the general algorithm is to create a QuestionnaireResponse with one item for every item in the source Questionnaire, including items with &quot;enableWhen&quot;, &quot;display&quot; items, etc.  If a question has a default, the default answer should be populated.  And the QuestionnaireResponse should point back to the originating Questionnaire.  Repeating items will typically only include a single repetition.  Other extensions and/or elements may also be populated if the system is aware of appropriate values.  Complex form designs with conditional logic or tight constraints on cardinalities may be challenging to auto-populate.  A server MAY choose to traverse the questionnaire as if it were a human respondent, answering only those questions that are enabled based on previously answered questions.  However, doing so may result in minimal population.  Alternatively, systems may choose to populate all known answers, independent of dependencies and other constraints.  This may cause questions to be answered that should not be answered.  It will be up to the client to appropriately prune the final populated questionnaire once human review has taken place.  Invoking this operation with the <code>content</code> parameter may involve the disclosure of personally identifiable healthcare information to the system which is performing the population process.  No such disclosures should be made unless the system on which the operation is being invoked is a &quot;trusted&quot; system and appropriate agreements are in place to protect the confidentiality of any information shared with that system.</p>\n</div></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "fhir"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 4,
+            "_valueInteger": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use",
+            "_valueCode": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-populate",
+        "version": "4.0.0-ballot",
+        "name": "SDCPopulateQuestionnaire",
+        "title": "Populate Questionnaire",
+        "status": "active",
+        "kind": "operation",
+        "date": "2018-08-19T21:48:56+10:00",
+        "publisher": "HL7 International / FHIR Infrastructure",
+        "contact": [
+          {
+            "name": "HL7 International / FHIR Infrastructure",
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          },
+          {
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          }
+        ],
+        "description": "Generates a [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) instance  based on a specified [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html), filling in answers to questions where possible based on information provided as part of the operation or already known by the server about the subject of the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html).\n\nIf the operation is not called at the instance level, one and only one of the identifier, questionnaire or questionnaireRef `in` parameters must be provided.\n\nIf called at the instance level, these parameters will be ignored.\nThe response will contain a [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) instance based on the specified [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) and/or an [OperationOutcome](http://hl7.org/fhir/R4/operationoutcome.html) resource with errors or warnings.\n\nThe [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) instance will be populated with an unanswered set of questions following the group and question structure of the specified [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html).\n\nIf  *content* parameters were specified or the *local* parameter was set to true, some of the questions may have answers filled in as well.  In the case of repeating questions or groups, typically only one repetition will be provided unless answer values exist that would support populating multiple repetitions.  \n\nPopulation of the [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) with appropriate data is dependent on the questions and/or groups in the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) having metadata that allows the server to recognize the questions.  Guidance on mechanisms to perform population can be found [here](populate.html).  \nRegardless of the mechanism used to link the questions in a questionnaire to a \\\"known\\\" mappable concept, solutions using this operation should ensure that the details of the question and associated linkage element are sufficiently similar as to safely allow auto-population; i.e. the question text and context must be sufficiently the same, the value set for the question must fall within the value set for the mapped element, the data types must be the same or convertible, etc.\"\n",
+        "jurisdiction": [
+          {
+            "coding": [
+              {
+                "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                "code": "001",
+                "display": "World"
+              }
+            ]
+          }
+        ],
+        "code": "populate",
+        "comment": "While it is theoretically possible for a [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) instance to be completely auto-populated and submitted without human review, the intention of this transaction is merely to reduce redundant data entry.  A client **SHOULD** ensure that a human submitter has an opportunity to review the auto-populated answers to confirm correctness as well as to complete or expand on information provided by the auto-population process.  When creating an \"empty\" questionnaire, the general algorithm is to create a QuestionnaireResponse with one item for every item in the source Questionnaire, including items with \"enableWhen\", \"display\" items, etc.  If a question has a default, the default answer should be populated.  And the QuestionnaireResponse should point back to the originating Questionnaire.  Repeating items will typically only include a single repetition.  Other extensions and/or elements may also be populated if the system is aware of appropriate values.  Complex form designs with conditional logic or tight constraints on cardinalities may be challenging to auto-populate.  A server MAY choose to traverse the questionnaire as if it were a human respondent, answering only those questions that are enabled based on previously answered questions.  However, doing so may result in minimal population.  Alternatively, systems may choose to populate all known answers, independent of dependencies and other constraints.  This may cause questions to be answered that should not be answered.  It will be up to the client to appropriately prune the final populated questionnaire once human review has taken place.  Invoking this operation with the `content` parameter may involve the disclosure of personally identifiable healthcare information to the system which is performing the population process.  No such disclosures should be made unless the system on which the operation is being invoked is a \"trusted\" system and appropriate agreements are in place to protect the confidentiality of any information shared with that system.",
+        "resource": [
+          "Questionnaire"
+        ],
+        "system": false,
+        "type": true,
+        "instance": true,
+        "inputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaire-populate-in",
+        "outputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaire-populate-out",
+        "parameter": [
+          {
+            "name": "identifier",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "A logical questionnaire identifier (i.e. `Questionnaire.identifier`). The server must know the questionnaire or be able to retrieve it from other known repositories.",
+            "type": "Identifier"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "uri"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "Reference"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "Questionnaire"
+              }
+            ],
+            "name": "questionnaire",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "The Questionnaire to populate the response. Can be provided as a canonical for the questionnaire, a questionnaire reference, or directly as a questionnaire resource.",
+            "type": "Element"
+          },
+          {
+            "name": "subject",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "The resource that is to be the *QuestionnaireResponse.subject*. The [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) instance will reference the provided subject.  In addition, if the *local* parameter is set to true, server information about the specified subject will be used to populate the instance.",
+            "type": "Reference"
+          },
+          {
+            "name": "context",
+            "use": "in",
+            "min": 0,
+            "max": "*",
+            "documentation": "Resources containing information to be used to help populate the [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html).  These will typically be FHIR resources, though alternative population mechanisms might allow consumption of binaries containing FHIR documents, CDA documents or other source materials.  Servers might not support all possible source materials and may ignore materials they do not recognize.  (They MAY provide warnings if ignoring submitted resources.)",
+            "part": [
+              {
+                "name": "name",
+                "use": "in",
+                "min": 1,
+                "max": "1",
+                "documentation": "The name of the launchContext or root Questionnaire variable the passed content should be used as for population purposes.  The name SHALL correspond to a launchContext or variable declared at the root of the Questionnaire. Allowed names include 'sourceQueries', which specifies that the context is the results of executing the queries in the sdc-questionnaire-sourceQueries extension.",
+                "type": "string"
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                    "valueUri": "Reference"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                    "valueUri": "Resource"
+                  }
+                ],
+                "name": "content",
+                "use": "in",
+                "min": 1,
+                "max": "*",
+                "documentation": "The actual resource (or resources) to use as the value of the launchContext or variable. The content should be provided as a resource if the server performing the population may not have access to the content or the content is not available for RESTful retrieval (e.g. it's a search-response Bundle).",
+                "type": "Element"
+              }
+            ]
+          },
+          {
+            "name": "local",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "If specified and set to `true` (and the server is capable), the server should use what resources and other knowledge it has about the referenced subject when pre-populating answers to questions.",
+            "type": "boolean"
+          },
+          {
+            "name": "response",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "The partially (or fully)-populated set of answers for the specified Questionnaire",
+            "type": "QuestionnaireResponse"
+          },
+          {
+            "name": "issues",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "documentation": "A list of hints and warnings about problems encountered while populating the questionnaire. These might be show to the user as an advisory note. Note: if the questionnaire cannot be populated at all, then the operation should fail, and an OperationOutcome is returned directly with the failure, rather than using this parameter",
+            "type": "OperationOutcome"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "OperationDefinition/Questionnaire-populatehtml"
+      },
+      "resource": {
+        "resourceType": "OperationDefinition",
+        "id": "Questionnaire-populatehtml",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Questionnaire-populatehtml</b></p><a name=\"Questionnaire-populatehtml\"> </a><a name=\"hcQuestionnaire-populatehtml\"> </a><a name=\"Questionnaire-populatehtml-en-US\"> </a><p>URL: [base]/Questionnaire/$populatehtml</p><p>URL: [base]/Questionnaire/[id]/$populatehtml</p><p>Input parameters Profile:<a href=\"StructureDefinition-parameters-questionnaire-populate-in.html\">Populate operation input parameters</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-parameters-questionnaire-populate-html-out.html\">Populate-html operation output parameters</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>A logical questionnaire identifier (i.e. <code>Questionnaire.identifier</code>). The server must know the questionnaire or be able to retrieve it from other known repositories.</p>\n</div></td></tr><tr><td>IN</td><td>questionnaire</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a> | <a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a> | <a href=\"http://hl7.org/fhir/R4/questionnaire.html\">Questionnaire</a></td><td/><td><div><p>The Questionnaire to populate the response. Can be provided as a canonical for the questionnaire, a questionnaire reference, or directly as a questionnaire resource.</p>\n</div></td></tr><tr><td>IN</td><td>subject</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a></td><td/><td><div><p>If the <em>local</em> parameter is set to true, server information about the specified subject will be used to populate the instance.  This may also be used to drive internal processing of the completed form.</p>\n</div></td></tr><tr><td>IN</td><td>context</td><td/><td>0..*</td><td></td><td/><td><div><p>Resources containing information to be used to help populate the <a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\">QuestionnaireResponse</a>.  These will typically be FHIR resources, though alternative population mechanisms might allow consumption of binaries containing FHIR documents, CDA documents or other source materials.  Servers might not support all possible source materials and may ignore materials they do not recognize.  (They MAY provide warnings if ignoring submitted resources.)</p>\n</div></td></tr><tr><td>IN</td><td>context.name</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>The name of the launchContext or root Questionnaire variable the passed content should be used as for population purposes.  The name SHALL correspond to a launchContext or variable delared at the root of the Questionnaire. Allowed names include 'sourceQueries', which specifies that the context is the results of executing the queries in the sdc-questionnaire-sourceQueries extension.</p>\n</div></td></tr><tr><td>IN</td><td>context.content</td><td/><td>1..*</td><td><a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a> | <a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The actual resource (or resources) to use as the value of the launchContext or variable. The content should be provided as a resource if the server performing the population may not have access to the content or the content is not available for RESTful retrieval (e.g. it's a search-response Bundle).</p>\n</div></td></tr><tr><td>IN</td><td>local</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>If specified and set to <code>true</code> (and the server is capable), the server should use what resources and other knowledge it has about the referenced subject when pre-populating answers to questions.</p>\n</div></td></tr><tr><td>OUT</td><td>form</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/binary.html\">Binary</a></td><td/><td><div><p>The generated HTML page that supports capturing the information defined by questionnaire, possibly partially (or fully)-populated with a set of answers for the specified Questionnaire</p>\n</div></td></tr><tr><td>OUT</td><td>issues</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/operationoutcome.html\">OperationOutcome</a></td><td/><td><div><p>A list of hints and warnings about problems encountered while populating the questionnaire. These might be show to the user as an advisory note. Note: if the questionnaire cannot be populated at all, then the operation should fail, and an OperationOutcome is returned directly with the failure, rather than using this parameter</p>\n</div></td></tr></table><div><p>While it is theoretically possible for an HTML form to be completely auto-populated and submitted without human review, the intention of this transaction is merely to reduce redundant data entry.  The HTML form <strong>SHOULD</strong> ensure that a human submitter has an opportunity to review the auto-populated answers to confirm correctness as well as to complete or expand on information provided by the auto-population process.  Complex form designs with conditional logic or tight constraints on cardinalities may be challenging to auto-populate.  A server MAY choose to traverse the questionnaire as if it were a human respondent, answering only those questions that are enabled based on previously answered questions.  However, doing so may result in minimal population.  Alternatively, systems may choose to populate all known answers, independent of dependencies and other constraints.  This may cause questions to be answered that should not be answered.  The generated HTML form is responsible for pruning the final populated questionnaire once human review has taken place.  Invoking this operation with the <code>content</code> parameter may involve the disclosure of personally identifiable healthcare information to the system which is performing the population process.  No such disclosures should be made unless the system on which the operation is being invoked is a &quot;trusted&quot; system and appropriate agreements are in place to protect the confidentiality of any information shared with that system.</p>\n</div></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "fhir"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 4,
+            "_valueInteger": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use",
+            "_valueCode": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-populatehtml",
+        "version": "4.0.0-ballot",
+        "name": "SDCQuestionnairePopulateHTML",
+        "title": "Generate HTML for Questionnaire",
+        "status": "active",
+        "kind": "operation",
+        "date": "2018-08-19T21:48:56+10:00",
+        "publisher": "HL7 International / FHIR Infrastructure",
+        "contact": [
+          {
+            "name": "HL7 International / FHIR Infrastructure",
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          },
+          {
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          }
+        ],
+        "description": "Generates an HTML page as a [Binary](http://hl7.org/fhir/R4/binary.html) instance  based on a specified [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html), filling in answers to questions where possible based on information provided as part of the operation or already known by the server about the subject of the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html).  If the operation is not called at the instance level, one and only one of the identifier, questionnaire or questionnaireRef `in` parameters must be provided. If called at the instance level, these parameters will be ignored.  The response will contain a [Binary](http://hl7.org/fhir/R4/binary.html) instance containing an HTML page for filling in and submitting the specified [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) and/or an [OperationOutcome](http://hl7.org/fhir/R4/operationoutcome.html) resource with errors or warnings.  The generated HTML form instance will be populated with an unanswered set of questions following the group and question structure of the specified [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html).  If  *content* parameters were specified or the *local* parameter was set to true, some of the questions may have answers filled in as well.  In the case of repeating questions or groups, typically only one repetition will be provided unless answer values exist that would support populating multiple repetitions.  Population of the HTML form with appropriate data is dependent on the questions and/or groups in the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) having metadata that allows the server to recognize the questions.  Guidance on mechanisms to perform population can be found [here](populate.html).  Regardless of the mechanism used to link the questions in a questionnaire to a \"known\" mappable concept, solutions using this operation should ensure that the details of the question and associated linkage element are sufficiently similar as to safely allow auto-population; i.e. the question text and context must be sufficiently the same, the value set for the question must fall within the value set for the mapped element, the data types must be the same or convertible, etc.",
+        "jurisdiction": [
+          {
+            "coding": [
+              {
+                "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                "code": "001",
+                "display": "World"
+              }
+            ]
+          }
+        ],
+        "code": "populatehtml",
+        "comment": "While it is theoretically possible for an HTML form to be completely auto-populated and submitted without human review, the intention of this transaction is merely to reduce redundant data entry.  The HTML form **SHOULD** ensure that a human submitter has an opportunity to review the auto-populated answers to confirm correctness as well as to complete or expand on information provided by the auto-population process.  Complex form designs with conditional logic or tight constraints on cardinalities may be challenging to auto-populate.  A server MAY choose to traverse the questionnaire as if it were a human respondent, answering only those questions that are enabled based on previously answered questions.  However, doing so may result in minimal population.  Alternatively, systems may choose to populate all known answers, independent of dependencies and other constraints.  This may cause questions to be answered that should not be answered.  The generated HTML form is responsible for pruning the final populated questionnaire once human review has taken place.  Invoking this operation with the `content` parameter may involve the disclosure of personally identifiable healthcare information to the system which is performing the population process.  No such disclosures should be made unless the system on which the operation is being invoked is a \"trusted\" system and appropriate agreements are in place to protect the confidentiality of any information shared with that system.",
+        "resource": [
+          "Questionnaire"
+        ],
+        "system": false,
+        "type": true,
+        "instance": true,
+        "inputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaire-populate-in",
+        "outputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaire-populate-html-out",
+        "parameter": [
+          {
+            "name": "identifier",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "A logical questionnaire identifier (i.e. `Questionnaire.identifier`). The server must know the questionnaire or be able to retrieve it from other known repositories.",
+            "type": "Identifier"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "uri"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "Reference"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "Questionnaire"
+              }
+            ],
+            "name": "questionnaire",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "The Questionnaire to populate the response. Can be provided as a canonical for the questionnaire, a questionnaire reference, or directly as a questionnaire resource.",
+            "type": "Element"
+          },
+          {
+            "name": "subject",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "If the *local* parameter is set to true, server information about the specified subject will be used to populate the instance.  This may also be used to drive internal processing of the completed form.",
+            "type": "Reference"
+          },
+          {
+            "name": "context",
+            "use": "in",
+            "min": 0,
+            "max": "*",
+            "documentation": "Resources containing information to be used to help populate the [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html).  These will typically be FHIR resources, though alternative population mechanisms might allow consumption of binaries containing FHIR documents, CDA documents or other source materials.  Servers might not support all possible source materials and may ignore materials they do not recognize.  (They MAY provide warnings if ignoring submitted resources.)",
+            "part": [
+              {
+                "name": "name",
+                "use": "in",
+                "min": 1,
+                "max": "1",
+                "documentation": "The name of the launchContext or root Questionnaire variable the passed content should be used as for population purposes.  The name SHALL correspond to a launchContext or variable delared at the root of the Questionnaire. Allowed names include 'sourceQueries', which specifies that the context is the results of executing the queries in the sdc-questionnaire-sourceQueries extension.",
+                "type": "string"
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                    "valueUri": "Reference"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                    "valueUri": "Resource"
+                  }
+                ],
+                "name": "content",
+                "use": "in",
+                "min": 1,
+                "max": "*",
+                "documentation": "The actual resource (or resources) to use as the value of the launchContext or variable. The content should be provided as a resource if the server performing the population may not have access to the content or the content is not available for RESTful retrieval (e.g. it's a search-response Bundle).",
+                "type": "Element"
+              }
+            ]
+          },
+          {
+            "name": "local",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "If specified and set to `true` (and the server is capable), the server should use what resources and other knowledge it has about the referenced subject when pre-populating answers to questions.",
+            "type": "boolean"
+          },
+          {
+            "name": "form",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "The generated HTML page that supports capturing the information defined by questionnaire, possibly partially (or fully)-populated with a set of answers for the specified Questionnaire",
+            "type": "Binary"
+          },
+          {
+            "name": "issues",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "documentation": "A list of hints and warnings about problems encountered while populating the questionnaire. These might be show to the user as an advisory note. Note: if the questionnaire cannot be populated at all, then the operation should fail, and an OperationOutcome is returned directly with the failure, rather than using this parameter",
+            "type": "OperationOutcome"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "OperationDefinition/Questionnaire-populatelink"
+      },
+      "resource": {
+        "resourceType": "OperationDefinition",
+        "id": "Questionnaire-populatelink",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Questionnaire-populatelink</b></p><a name=\"Questionnaire-populatelink\"> </a><a name=\"hcQuestionnaire-populatelink\"> </a><a name=\"Questionnaire-populatelink-en-US\"> </a><p>URL: [base]/Questionnaire/$populatelink</p><p>URL: [base]/Questionnaire/[id]/$populatelink</p><p>Input parameters Profile:<a href=\"StructureDefinition-parameters-questionnaire-populate-in.html\">Populate operation input parameters</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-parameters-questionnaire-populate-link-out.html\">Populate-link operation output parameters</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>A logical questionnaire identifier (i.e. <code>Questionnaire.identifier</code>). The server must know the questionnaire or be able to retrieve it from other known repositories.</p>\n</div></td></tr><tr><td>IN</td><td>questionnaire</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a> | <a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a> | <a href=\"http://hl7.org/fhir/R4/questionnaire.html\">Questionnaire</a></td><td/><td><div><p>The Questionnaire to populate the response. Can be provided as a canonical for the questionnaire, a questionnaire reference, or directly as a questionnaire resource.</p>\n</div></td></tr><tr><td>IN</td><td>subject</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a></td><td/><td><div><p>If the <em>local</em> parameter is set to true, server information about the specified subject will be used to populate the instance.  This may also be used to drive internal processing of the completed form.</p>\n</div></td></tr><tr><td>IN</td><td>context</td><td/><td>0..*</td><td></td><td/><td><div><p>Resources containing information to be used to help populate the <a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\">QuestionnaireResponse</a>.  These will typically be FHIR resources, though alternative population mechanisms might allow consumption of binaries containing FHIR documents, CDA documents or other source materials.  Servers might not support all possible source materials and may ignore materials they do not recognize.  (They MAY provide warnings if ignoring submitted resources.)</p>\n</div></td></tr><tr><td>IN</td><td>context.name</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>The name of the launchContext or root Questionnaire variable the passed content should be used as for population purposes.  The name SHALL correspond to a launchContext or variable declared at the root of the Questionnaire. Allowed names include 'sourceQueries', which specifies that the context is the results of executing the queries in the sdc-questionnaire-sourceQueries extension.</p>\n</div></td></tr><tr><td>IN</td><td>context.content</td><td/><td>1..*</td><td><a href=\"http://hl7.org/fhir/R4/references.html#Reference\">Reference</a> | <a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The actual resource (or resources) to use as the value of the launchContext or variable. The content should be provided as a resource if the server performing the population may not have access to the content or the content is not available for RESTful retrieval (e.g. it's a search-response Bundle).</p>\n</div></td></tr><tr><td>IN</td><td>local</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#boolean\">boolean</a></td><td/><td><div><p>If specified and set to <code>true</code> (and the server is capable), the server should use what resources and other knowledge it has about the referenced subject when pre-populating answers to questions.</p>\n</div></td></tr><tr><td>OUT</td><td>link</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a></td><td/><td><div><p>The URL for the web form  that supports capturing the information defined by questionnaire, possibly partially (or fully)-populated with a set of answers for the specified Questionnaire</p>\n</div></td></tr><tr><td>OUT</td><td>issues</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/operationoutcome.html\">OperationOutcome</a></td><td/><td><div><p>A list of hints and warnings about problems encountered while populating the questionnaire. These might be show to the user as an advisory note. Note: if the questionnaire cannot be populated at all, then the operation should fail, and an OperationOutcome is returned directly with the failure, rather than using this parameter</p>\n</div></td></tr></table><div><p>While it is theoretically possible for the questionnaire response to be completely auto-populated and submitted without human review, the intention of this transaction is merely to reduce redundant data entry.  The web page <strong>SHOULD</strong> ensure that a human submitter has an opportunity to review the auto-populated answers to confirm correctness as well as to complete or expand on information provided by the auto-population process.  Complex form designs with conditional logic or tight constraints on cardinalities may be challenging to auto-populate.  A server MAY choose to traverse the questionnaire as if it were a human respondent, answering only those questions that are enabled based on previously answered questions.  However, doing so may result in minimal population.  Alternatively, systems may choose to populate all known answers, independent of dependencies and other constraints.  This may cause questions to be answered that should not be answered.  The web form is responsible for pruning the final populated questionnaire once human review has taken place.  Invoking this operation with the <code>content</code> parameter may involve the disclosure of personally identifiable healthcare information to the system which is performing the population process.  No such disclosures should be made unless the system on which the operation is being invoked is a &quot;trusted&quot; system and appropriate agreements are in place to protect the confidentiality of any information shared with that system.</p>\n</div></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "fhir"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 4,
+            "_valueInteger": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use",
+            "_valueCode": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-populatelink",
+        "version": "4.0.0-ballot",
+        "name": "SDCQuestionnairePopulateLink",
+        "title": "Generate a link to a Questionnaire completion webpage",
+        "status": "active",
+        "kind": "operation",
+        "date": "2018-08-19T21:48:56+10:00",
+        "publisher": "HL7 International / FHIR Infrastructure",
+        "contact": [
+          {
+            "name": "HL7 International / FHIR Infrastructure",
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          },
+          {
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          }
+        ],
+        "description": "Generates a link to a web page to be used to answer a specified [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html).  The form at the specified location will be pre-filled with answers to questions where possible based on information provided as part of the operation or already known by the server about the subject of the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html).  If the operation is not called at the instance level, one and only one of the identifier, questionnaire or questionnaireRef `in` parameters must be provided. If called at the instance level, these parameters will be ignored.  The response will contain a url for the web page to direct the user to.  The page will allow the user to complete/verify the questionnaire answers and to submit the form.  The specified page will be populated with an unanswered set of questions following the group and question structure of the specified [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html).  If  *content* parameters were specified or the *local* parameter was set to true, some of the questions may have answers filled in as well.  In the case of repeating questions or groups, typically only one repetition will be provided unless answer values exist that would support populating multiple repetitions.  Population of the page with appropriate data is dependent on the questions and/or groups in the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) having metadata that allows the server to recognize the questions.  Guidance on mechanisms to perform population can be found [here](populate.html).  Regardless of the mechanism used to link the questions in a questionnaire to a \"known\" mappable concept, solutions using this operation should ensure that the details of the question and associated linkage element are sufficiently similar as to safely allow auto-population; i.e. the question text and context must be sufficiently the same, the value set for the question must fall within the value set for the mapped element, the data types must be the same or convertible, etc.",
+        "jurisdiction": [
+          {
+            "coding": [
+              {
+                "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                "code": "001",
+                "display": "World"
+              }
+            ]
+          }
+        ],
+        "code": "populatelink",
+        "comment": "While it is theoretically possible for the questionnaire response to be completely auto-populated and submitted without human review, the intention of this transaction is merely to reduce redundant data entry.  The web page **SHOULD** ensure that a human submitter has an opportunity to review the auto-populated answers to confirm correctness as well as to complete or expand on information provided by the auto-population process.  Complex form designs with conditional logic or tight constraints on cardinalities may be challenging to auto-populate.  A server MAY choose to traverse the questionnaire as if it were a human respondent, answering only those questions that are enabled based on previously answered questions.  However, doing so may result in minimal population.  Alternatively, systems may choose to populate all known answers, independent of dependencies and other constraints.  This may cause questions to be answered that should not be answered.  The web form is responsible for pruning the final populated questionnaire once human review has taken place.  Invoking this operation with the `content` parameter may involve the disclosure of personally identifiable healthcare information to the system which is performing the population process.  No such disclosures should be made unless the system on which the operation is being invoked is a \"trusted\" system and appropriate agreements are in place to protect the confidentiality of any information shared with that system.",
+        "resource": [
+          "Questionnaire"
+        ],
+        "system": false,
+        "type": true,
+        "instance": true,
+        "inputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaire-populate-in",
+        "outputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaire-populate-link-out",
+        "parameter": [
+          {
+            "name": "identifier",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "A logical questionnaire identifier (i.e. `Questionnaire.identifier`). The server must know the questionnaire or be able to retrieve it from other known repositories.",
+            "type": "Identifier"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "uri"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "Reference"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                "valueUri": "Questionnaire"
+              }
+            ],
+            "name": "questionnaire",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "The Questionnaire to populate the response. Can be provided as a canonical for the questionnaire, a questionnaire reference, or directly as a questionnaire resource.",
+            "type": "Element"
+          },
+          {
+            "name": "subject",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "If the *local* parameter is set to true, server information about the specified subject will be used to populate the instance.  This may also be used to drive internal processing of the completed form.",
+            "type": "Reference"
+          },
+          {
+            "name": "context",
+            "use": "in",
+            "min": 0,
+            "max": "*",
+            "documentation": "Resources containing information to be used to help populate the [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html).  These will typically be FHIR resources, though alternative population mechanisms might allow consumption of binaries containing FHIR documents, CDA documents or other source materials.  Servers might not support all possible source materials and may ignore materials they do not recognize.  (They MAY provide warnings if ignoring submitted resources.)",
+            "part": [
+              {
+                "name": "name",
+                "use": "in",
+                "min": 1,
+                "max": "1",
+                "documentation": "The name of the launchContext or root Questionnaire variable the passed content should be used as for population purposes.  The name SHALL correspond to a launchContext or variable declared at the root of the Questionnaire. Allowed names include 'sourceQueries', which specifies that the context is the results of executing the queries in the sdc-questionnaire-sourceQueries extension.",
+                "type": "string"
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                    "valueUri": "Reference"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type",
+                    "valueUri": "Resource"
+                  }
+                ],
+                "name": "content",
+                "use": "in",
+                "min": 1,
+                "max": "*",
+                "documentation": "The actual resource (or resources) to use as the value of the launchContext or variable. The content should be provided as a resource if the server performing the population may not have access to the content or the content is not available for RESTful retrieval (e.g. it's a search-response Bundle).",
+                "type": "Element"
+              }
+            ]
+          },
+          {
+            "name": "local",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "If specified and set to `true` (and the server is capable), the server should use what resources and other knowledge it has about the referenced subject when pre-populating answers to questions.",
+            "type": "boolean"
+          },
+          {
+            "name": "link",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "The URL for the web form  that supports capturing the information defined by questionnaire, possibly partially (or fully)-populated with a set of answers for the specified Questionnaire",
+            "type": "uri"
+          },
+          {
+            "name": "issues",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "documentation": "A list of hints and warnings about problems encountered while populating the questionnaire. These might be show to the user as an advisory note. Note: if the questionnaire cannot be populated at all, then the operation should fail, and an OperationOutcome is returned directly with the failure, rather than using this parameter",
+            "type": "OperationOutcome"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "OperationDefinition/Questionnaire-process-response"
+      },
+      "resource": {
+        "resourceType": "OperationDefinition",
+        "id": "Questionnaire-process-response",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition Questionnaire-process-response</b></p><a name=\"Questionnaire-process-response\"> </a><a name=\"hcQuestionnaire-process-response\"> </a><a name=\"Questionnaire-process-response-en-US\"> </a><p>URL: [base]/Questionnaire/$process-response</p><p>URL: [base]/Questionnaire/[id]/$process-response</p><p>Input parameters Profile:<a href=\"StructureDefinition-parameters-questionnaire-process-response-in.html\">Questionnaire process response operation input parameters</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>response</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/questionnaireresponse.html\">QuestionnaireResponse</a></td><td/><td><div><p>The questionnaire response to be accepted/processed</p>\n</div></td></tr><tr><td>OUT</td><td>warnings</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/operationoutcome.html\">OperationOutcome</a></td><td/><td><div><p>If the response is successfully procssed, an OperationOutcome may still be returned indicating warnings.  For example, identifying questions that were incomplete, answers that were defaulted, etc.  It may also convey 'information' messages about the processing of the questionnaire response.</p>\n</div></td></tr></table><div><p>Some receivers may accept responses that are still 'in progress', but others may reject instances with a status other than 'final' or possibly 'amended'.  If the operation is invoked on a particular Questionnaire, the submitted QuestionnaireResponse must be a response to the specified Questionnaire.  Otherwise, the QuestionnaireResponse will be validated against whatever Questionnaire the QuestionnaireResponse references.  It is an error for a QuestionnaireResponse that does not declare a questionnaire to be invoked directly on the Questionnaire endpoint.</p>\n</div></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "fhir"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 4,
+            "_valueInteger": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use",
+            "_valueCode": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-process-response",
+        "version": "4.0.0-ballot",
+        "name": "SDCQuestionnaireProcessResponse",
+        "title": "Questionnaire Process Response",
+        "status": "active",
+        "kind": "operation",
+        "date": "2017-03-19",
+        "publisher": "HL7 International / FHIR Infrastructure",
+        "contact": [
+          {
+            "name": "HL7 International / FHIR Infrastructure",
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          },
+          {
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          }
+        ],
+        "description": "This operation allows a system to 'receive' a QuestionnaireResponse for a particular Questionnaire.  It is intended to be used by systems that expect to receive completed questionnaires but which do not necessarily want to host a RESTful endpoint where those responses are subsequently queryable.  The receiver may choose to perform validation of the received response or against local business rules.  There no response beyond an HTTP 200 OK if the response is consumed successfully, though an OperationOutcome can optionally be returned identifying warnings.  If there are validation or other issues, the operation will fail with details in an OperationOutcome.  The specific action that occurs on receipt of a form will depend on both the type of form and the submitter.  It could trigger admission to a clinical trial, the beginning of an product investigation, the consideration of a patient's eligibility for coverage, etc.  Alternatively, the data may simply be consumed and aggregated with other information for analysis or other use.",
+        "jurisdiction": [
+          {
+            "coding": [
+              {
+                "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                "code": "001",
+                "display": "World"
+              }
+            ]
+          }
+        ],
+        "code": "process-response",
+        "comment": "Some receivers may accept responses that are still 'in progress', but others may reject instances with a status other than 'final' or possibly 'amended'.  If the operation is invoked on a particular Questionnaire, the submitted QuestionnaireResponse must be a response to the specified Questionnaire.  Otherwise, the QuestionnaireResponse will be validated against whatever Questionnaire the QuestionnaireResponse references.  It is an error for a QuestionnaireResponse that does not declare a questionnaire to be invoked directly on the Questionnaire endpoint.",
+        "resource": [
+          "Questionnaire"
+        ],
+        "system": false,
+        "type": true,
+        "instance": true,
+        "inputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaire-process-response-in",
+        "parameter": [
+          {
+            "name": "response",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The questionnaire response to be accepted/processed",
+            "type": "QuestionnaireResponse"
+          },
+          {
+            "name": "warnings",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "documentation": "If the response is successfully procssed, an OperationOutcome may still be returned indicating warnings.  For example, identifying questions that were incomplete, answers that were defaulted, etc.  It may also convey 'information' messages about the processing of the questionnaire response.",
+            "type": "OperationOutcome"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "OperationDefinition/QuestionnaireResponse-extract"
+      },
+      "resource": {
+        "resourceType": "OperationDefinition",
+        "id": "QuestionnaireResponse-extract",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition QuestionnaireResponse-extract</b></p><a name=\"QuestionnaireResponse-extract\"> </a><a name=\"hcQuestionnaireResponse-extract\"> </a><a name=\"QuestionnaireResponse-extract-en-US\"> </a><p>URL: [base]/QuestionnaireResponse/$extract</p><p>URL: [base]/QuestionnaireResponse/[id]/$extract</p><p>Input parameters Profile:<a href=\"StructureDefinition-parameters-questionnaireresponse-extract-in.html\">Questionnaire extract operation input parameters</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>questionnaire-response</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The QuestionnaireResponse to extract data from.  Used when the operation is invoked at the 'type' level.</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The resulting FHIR resource produced after extracting data.  This will either be a single resource or a Transaction Bundle that contains multiple resources.  The operations in the Bundle might be creates, updates and/or conditional versions of both depending on the nature of the extraction mappings.</p>\n</div></td></tr><tr><td>OUT</td><td>issues</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/operationoutcome.html\">OperationOutcome</a></td><td/><td><div><p>A list of hints and warnings about problems encountered while extracting the resource(s) from the QuestionnaireResponse. If there was nothing to extract, a 'success' OperationOutcome is returned with a warning and/or information messages. In situations where the input is invalid or the operation otherwise fails to complete successfully, a normal 'erroneous' OperationOutcome would be returned (as happens with all operations) indicating what the issue was.</p>\n</div></td></tr></table><div><p>The QuestionnaireResponse must identify a Questionnaire instance containing appropriate metadata to allow extraction.  (Refer to the <a href=\"extraction.html\">Data Extraction</a> page for more details.)</p>\n</div></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+            "valueCode": "fhir"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 4,
+            "_valueInteger": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use",
+            "_valueCode": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+                  "valueCanonical": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+                }
+              ]
+            }
+          }
+        ],
+        "url": "http://hl7.org/fhir/uv/sdc/OperationDefinition/QuestionnaireResponse-extract",
+        "version": "4.0.0-ballot",
+        "name": "SDCQuestionnaireResponseExtract",
+        "title": "Questionnaire response extract to resource(s)",
+        "status": "active",
+        "kind": "operation",
+        "date": "2018-08-30",
+        "publisher": "HL7 International / FHIR Infrastructure",
+        "contact": [
+          {
+            "name": "HL7 International / FHIR Infrastructure",
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          },
+          {
+            "telecom": [
+              {
+                "system": "url",
+                "value": "http://www.hl7.org/Special/committees/fiwg"
+              }
+            ]
+          }
+        ],
+        "description": "The Extract operation takes a completed QuestionnaireResponse and converts it to a FHIR resource or Bundle of resources by using metadata embedded in the Questionnaire the QuestionnaireResponse is based on.  \r\n  The extracted resources might include Observations, MedicationStatements and other standard FHIR resources which can then be shared and manipulated.\r\n  When invoking the $extract operation, care should be taken that the submitted QuestionnaireResponse is itself valid.  If not, the extract operation could fail (with appropriate OperationOutcomes)\r\n  or, more problematic, might succeed but provide incorrect output.",
+        "jurisdiction": [
+          {
+            "coding": [
+              {
+                "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                "code": "001",
+                "display": "World"
+              }
+            ]
+          }
+        ],
+        "code": "extract",
+        "comment": "The QuestionnaireResponse must identify a Questionnaire instance containing appropriate metadata to allow extraction.  (Refer to the [Data Extraction](extraction.html) page for more details.)",
+        "resource": [
+          "QuestionnaireResponse"
+        ],
+        "system": false,
+        "type": true,
+        "instance": true,
+        "inputProfile": "http://hl7.org/fhir/uv/sdc/StructureDefinition/parameters-questionnaireresponse-extract-in",
+        "parameter": [
+          {
+            "name": "questionnaire-response",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "The QuestionnaireResponse to extract data from.  Used when the operation is invoked at the 'type' level.",
+            "type": "Resource"
+          },
+          {
+            "name": "return",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "documentation": "The resulting FHIR resource produced after extracting data.  This will either be a single resource or a Transaction Bundle that contains multiple resources.  The operations in the Bundle might be creates, updates and/or conditional versions of both depending on the nature of the extraction mappings.",
+            "type": "Resource"
+          },
+          {
+            "name": "issues",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "documentation": "A list of hints and warnings about problems encountered while extracting the resource(s) from the QuestionnaireResponse. If there was nothing to extract, a 'success' OperationOutcome is returned with a warning and/or information messages. In situations where the input is invalid or the operation otherwise fails to complete successfully, a normal 'erroneous' OperationOutcome would be returned (as happens with all operations) indicating what the issue was.",
+            "type": "OperationOutcome"
+          }
+        ]
+      }
+    }
+  ]
+}

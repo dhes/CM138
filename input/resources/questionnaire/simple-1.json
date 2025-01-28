@@ -1,0 +1,24 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "simple-1",
+  "url": "http://hl7.org/fhir/uv/sdc/Questionnaire/simple-1",
+  "version": "1.0.0",
+  "status": "active",
+  "experimental": true,
+  "item": [
+    {
+      "linkId": "patient-name",
+      "text": "Patient Name",
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+          "valueExpression": {
+            "language": "text/fhirpath",
+            "expression": "%subject.name.where(use='official').first().given.first()"
+          }
+        }
+      ]
+    }
+  ]
+}

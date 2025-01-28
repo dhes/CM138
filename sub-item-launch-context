@@ -6,7 +6,7 @@
           "url": "name",
           "valueCoding": {
             "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext",
-            "code": "observation"
+            "code": "smokingStatus"
           }
         },
         {

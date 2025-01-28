@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "observation-extract-relationship",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hapifhir.io/fhir/StructureDefinition/valueset-expansion-message",
+        "valueString": "ValueSet with URL \"ValueSet.url[http://hl7.org/fhir/uv/sdc/ValueSet/observation-extract-relationship]\" was expanded using an in-memory expansion"
+      }
+    ]
+  },
+  "url": "http://hl7.org/fhir/uv/sdc/ValueSet/observation-extract-relationship",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/observation-extract-relationship"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "fc378962-e5d4-447a-b2a4-9d4292d4c89b",
+    "timestamp": "2025-01-28T02:13:03+00:00",
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "offset",
+        "valueInteger": 0
+      },
+      {
+        "name": "count",
+        "valueInteger": 1000
+      }
+    ]
+  }
+}

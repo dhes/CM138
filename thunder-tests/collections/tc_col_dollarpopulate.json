@@ -168,6 +168,40 @@
                     "isPath": false
                 }
             ]
+        },
+        {
+            "_id": "e1a3623d-d639-48d6-8406-e94ea9aa0473",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "simple-1",
+            "url": "Questionnaire/simple-1/$populate",
+            "method": "POST",
+            "sortNum": 77500,
+            "created": "2025-01-27T19:28:21.889Z",
+            "modified": "2025-01-27T19:35:35.324Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    }\n  ]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f0111980-8456-48de-98c3-651c80adffa8",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "simple-2",
+            "url": "Questionnaire/simple-2/$populate",
+            "method": "POST",
+            "sortNum": 87500,
+            "created": "2025-01-27T20:02:14.626Z",
+            "modified": "2025-01-27T21:43:25.136Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    },\n    {\n      \"name\": \"context\",\n      \"part\": [\n        {\n          \"name\": \"name\",\n          \"valueString\": \"lastTobaccoUse\"\n        },\n        {\n          \"name\": \"content\",\n          \"valueReference\": {\n            \"reference\": \"Observation/tus-screened-observation\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+                "form": []
+            }
         }
     ],
     "settings": {

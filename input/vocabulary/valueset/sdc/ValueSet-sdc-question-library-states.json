@@ -1,0 +1,112 @@
+{
+  "resourceType": "ValueSet",
+  "id": "sdc-question-library-states",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hapifhir.io/fhir/StructureDefinition/valueset-expansion-message",
+        "valueString": "ValueSet with URL \"ValueSet.url[http://hl7.org/fhir/uv/sdc/ValueSet/sdc-question-library-states]\" was expanded using an in-memory expansion"
+      }
+    ]
+  },
+  "url": "http://hl7.org/fhir/uv/sdc/ValueSet/sdc-question-library-states",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://example.org/CodeSystem/Australian-States",
+        "concept": [
+          {
+            "code": "ACT",
+            "display": "Australian Capital Territory"
+          },
+          {
+            "code": "NSW",
+            "display": "New South Wales"
+          },
+          {
+            "code": "NT",
+            "display": "Northern Territory"
+          },
+          {
+            "code": "Qld",
+            "display": "Queensland"
+          },
+          {
+            "code": "SA",
+            "display": "South Australia"
+          },
+          {
+            "code": "Vic",
+            "display": "Victoria"
+          },
+          {
+            "code": "Tas",
+            "display": "Tasmania"
+          },
+          {
+            "code": "WA",
+            "display": "Western Australia"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "c125e79d-612f-4a69-a710-13c36b4dccc1",
+    "timestamp": "2025-01-28T02:13:24+00:00",
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "offset",
+        "valueInteger": 0
+      },
+      {
+        "name": "count",
+        "valueInteger": 1000
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://example.org/CodeSystem/Australian-States",
+        "code": "ACT",
+        "display": "Australian Capital Territory"
+      },
+      {
+        "system": "http://example.org/CodeSystem/Australian-States",
+        "code": "NSW",
+        "display": "New South Wales"
+      },
+      {
+        "system": "http://example.org/CodeSystem/Australian-States",
+        "code": "NT",
+        "display": "Northern Territory"
+      },
+      {
+        "system": "http://example.org/CodeSystem/Australian-States",
+        "code": "Qld",
+        "display": "Queensland"
+      },
+      {
+        "system": "http://example.org/CodeSystem/Australian-States",
+        "code": "SA",
+        "display": "South Australia"
+      },
+      {
+        "system": "http://example.org/CodeSystem/Australian-States",
+        "code": "Vic",
+        "display": "Victoria"
+      },
+      {
+        "system": "http://example.org/CodeSystem/Australian-States",
+        "code": "Tas",
+        "display": "Tasmania"
+      },
+      {
+        "system": "http://example.org/CodeSystem/Australian-States",
+        "code": "WA",
+        "display": "Western Australia"
+      }
+    ]
+  }
+}

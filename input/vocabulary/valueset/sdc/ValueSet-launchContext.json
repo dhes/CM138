@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "launchContext",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hapifhir.io/fhir/StructureDefinition/valueset-expansion-message",
+        "valueString": "ValueSet with URL \"ValueSet.url[http://hl7.org/fhir/uv/sdc/ValueSet/launchContext]\" was expanded using an in-memory expansion"
+      }
+    ]
+  },
+  "url": "http://hl7.org/fhir/uv/sdc/ValueSet/launchContext",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "ae7e45a9-75d6-49fa-b076-33567ae617f5",
+    "timestamp": "2025-01-28T02:12:58+00:00",
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "offset",
+        "valueInteger": 0
+      },
+      {
+        "name": "count",
+        "valueInteger": 1000
+      }
+    ]
+  }
+}

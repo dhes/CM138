@@ -1,0 +1,74 @@
+{
+  "resourceType" : "CapabilityStatement",
+  "id" : "sdc-form-receiver",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CapabilityStatement sdc-form-receiver</b></p><a name=\"sdc-form-receiver\"> </a><a name=\"hcsdc-form-receiver\"> </a><a name=\"sdc-form-receiver-en-US\"> </a><h2 id=\"title\">SDC Form Receiver</h2><ul><li>Implementation Guide Version: 4.0.0-ballot </li><li>FHIR Version: 1.0.0 </li><li>Supported Formats: <code>xml</code>, <code>json</code></li><li>Supported Patch Formats: </li><li>Published on: 2014-07-06 </li><li>Published by: HL7 International / FHIR Infrastructure </li></ul><blockquote class=\"impl-note\"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id=\"rest\">FHIR RESTful Capabilities</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>server</code></h3></div><div class=\"panel-body\"><div class=\"lead\"><em>Security</em></div><blockquote><div><p>Implementations must meet the general security requirements documented in the [[security.html|SDC implementation guide]].</p>\n</div></blockquote><div class=\"lead\"><em>Summary of System-wide Interactions</em></div></div></div><h3 id=\"operationsCap1\">Operations</h3><h4 id=\"operationsSummary1\">Use</h4></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "fhir"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 4,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/uv/sdc/CapabilityStatement/sdc-form-receiver",
+  "version" : "4.0.0-ballot",
+  "name" : "SDCFormReceiver",
+  "title" : "SDC Form Receiver",
+  "status" : "active",
+  "date" : "2014-07-06",
+  "publisher" : "HL7 International / FHIR Infrastructure",
+  "contact" : [{
+    "name" : "HL7 International / FHIR Infrastructure",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/fiwg"
+    }]
+  },
+  {
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/fiwg"
+    }]
+  }],
+  "description" : "This profile defines the expected capabilities of the ''SDC Form Receiver'' role when conforming to the S&I Framework's [[index.html|Structured Data Capture FHIR implementation guide]].  This role is responsible for accepting and processing completed and partially-completed forms.  It only exposes a single operation endpoint - the one needed to 'process' a completed QuestionnaireResponse",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "kind" : "requirements",
+  "fhirVersion" : "1.0.0",
+  "format" : ["xml",
+  "json"],
+  "rest" : [{
+    "mode" : "server",
+    "security" : {
+      "description" : "Implementations must meet the general security requirements documented in the [[security.html|SDC implementation guide]]."
+    },
+    "operation" : [{
+      "name" : "process-response",
+      "definition" : "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-process-response"
+    }]
+  }]
+}
