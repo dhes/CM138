@@ -178,11 +178,11 @@
             "method": "POST",
             "sortNum": 77500,
             "created": "2025-01-27T19:28:21.889Z",
-            "modified": "2025-01-27T19:35:35.324Z",
+            "modified": "2025-01-29T18:22:15.946Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    }\n  ]\n}",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    },\n    {\n      \"name\": \"local\",\n      \"valueBoolean\": true\n    }\n  ]\n}",
                 "form": []
             }
         },
@@ -190,16 +190,139 @@
             "_id": "f0111980-8456-48de-98c3-651c80adffa8",
             "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
             "containerId": "",
-            "name": "simple-2",
-            "url": "Questionnaire/simple-2/$populate",
+            "name": "populate simple-2",
+            "url": "Questionnaire/simple-2/$populate?debug=true",
             "method": "POST",
             "sortNum": 87500,
             "created": "2025-01-27T20:02:14.626Z",
-            "modified": "2025-01-27T21:43:25.136Z",
+            "modified": "2025-01-29T21:24:49.389Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "debug",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    },\n    {\n      \"name\": \"context\",\n      \"part\": [\n        {\n          \"name\": \"name\",\n          \"valueString\": \"patient\"\n        },\n        {\n          \"name\": \"content\",\n          \"valueReference\": {\n            \"reference\": \"Patient/tus-screened\"\n          }\n        }\n      ]\n    },\n    {\n      \"name\": \"local\",\n      \"valueBoolean\": true\n    }\n  ]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "62315cf9-f1dd-49e3-9ac2-de6c259048d4",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "CalculatedExpressionBMICalculatorPrepop",
+            "url": "Questionnaire/CalculatedExpressionBMICalculatorPrepop/$populate",
+            "method": "POST",
+            "sortNum": 97500,
+            "created": "2025-01-29T00:30:08.767Z",
+            "modified": "2025-01-29T01:32:07.427Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    },\n    {\n      \"name\": \"context\",\n      \"part\": [\n        {\n          \"name\": \"name\",\n          \"valueString\": \"lastTobaccoUse\"\n        },\n        {\n          \"name\": \"content\",\n          \"valueReference\": {\n            \"reference\": \"Observation/tus-screened-observation\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    },\n    {\n      \"name\": \"context\",\n      \"part\": [\n        {\n          \"name\": \"name\",\n          \"valueString\": \"patient\"\n        },\n        {\n          \"name\": \"content\",\n          \"valueReference\": {\n            \"reference\": \"Patient/tus-screened\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "61306d89-67e8-4667-98ca-66372f695696",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "observation-demographics-example-v3",
+            "url": "Questionnaire/observation-demographics-example-v3/$populate?debug=true",
+            "method": "POST",
+            "sortNum": 63750,
+            "created": "2025-01-29T01:03:33.704Z",
+            "modified": "2025-01-29T03:45:33.851Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "debug",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    },\n    {\n      \"name\": \"context\",\n      \"part\": [\n        {\n          \"name\": \"name\",\n          \"valueString\": \"patient\"\n        },\n        {\n          \"name\": \"content\",\n          \"valueReference\": {\n            \"reference\": \"Patient/tus-screened\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "973e0acf-cc00-4da2-91c9-13182f48b3a2",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "postman-body-v2",
+            "url": "Questionnaire/CalculatedExpressionBMICalculatorPrepop/$populate",
+            "method": "POST",
+            "sortNum": 107500,
+            "created": "2025-01-29T04:46:17.412Z",
+            "modified": "2025-01-29T04:53:34.654Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"type\": \"Patient\",\n        \"reference\": \"Patient/pat-sf\"\n      }\n    },\n    {\n      \"name\": \"context\",\n      \"part\": [\n        {\n          \"name\": \"name\",\n          \"valueString\": \"patient\"\n        },\n        {\n          \"name\": \"content\",\n          \"resource\": {\n            \"resourceType\": \"Patient\",\n            \"id\": \"pat-sf\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b7e22473-e730-42c9-a5ab-47f25c4b94db",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "$populate simple-observation",
+            "url": "Questionnaire/simple-observation-debug/$populate?debug=true",
+            "method": "POST",
+            "sortNum": 117500,
+            "created": "2025-01-30T00:47:25.198Z",
+            "modified": "2025-01-30T00:57:18.531Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "debug",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    },\n    {\n      \"name\": \"context\",\n      \"part\": [\n        {\n          \"name\": \"name\",\n          \"valueString\": \"patient\"\n        },\n        {\n          \"name\": \"content\",\n          \"valueReference\": {\n            \"reference\": \"Patient/tus-screened\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "56537841-3867-4bc7-8eed-c179063d5cf3",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "POPULATE clinical-launch-context",
+            "url": "Questionnaire/clinical-launch-context/$populate",
+            "method": "POST",
+            "sortNum": 127500,
+            "created": "2025-01-30T01:28:18.997Z",
+            "modified": "2025-02-02T01:02:06.185Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    },\n    {\n      \"name\": \"clinical\",\n      \"valueReference\": {\n        \"reference\": \"Observation?code=http://loinc.org|72166-2&_sort=-date&_count=1\"\n      }\n    }\n  ]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9dd4eb17-af70-4b2d-bcbc-3c618e0ac4c8",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "$populate smoking",
+            "url": "Questionnaire/smoking/$populate",
+            "method": "POST",
+            "sortNum": 147500,
+            "created": "2025-02-02T01:01:25.883Z",
+            "modified": "2025-02-02T01:25:41.982Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    }\n  ]\n}",
                 "form": []
             }
         }
