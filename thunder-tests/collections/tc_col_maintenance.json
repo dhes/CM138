@@ -10,11 +10,11 @@
             "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
             "containerId": "",
             "name": "general utility",
-            "url": "StructureDefinition",
+            "url": "ValueSet",
             "method": "GET",
             "sortNum": 10000,
             "created": "2025-01-22T20:06:22.356Z",
-            "modified": "2025-02-04T22:05:08.473Z",
+            "modified": "2025-02-04T23:15:41.765Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -910,6 +910,24 @@
                 "raw": "",
                 "form": [],
                 "binary": "../input/resources/structuredefinition/smoking-status.json"
+            }
+        },
+        {
+            "_id": "ed560925-248f-4928-9480-745e611e7f68",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT ValueSet us-core-observation-smokingstatus",
+            "url": "ValueSet/us-core-observation-smokingstatus",
+            "method": "PUT",
+            "sortNum": 570000,
+            "created": "2025-02-04T23:18:05.394Z",
+            "modified": "2025-02-04T23:18:41.046Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/vocabulary/valueset/external/ValueSet-us-core-observation-smokingstatus.json"
             }
         }
     ],

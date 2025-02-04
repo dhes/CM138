@@ -54,13 +54,13 @@
           "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
           "valueExpression": {
             "language": "text/cql-identifier",
-            "expression": "AllObservations"
+            "expression": "TobaccoUseScreenings"
           }
         }
       ],
       "linkId": "0",
       "definition": "http://hopena.info/StructureDefinition/smoking-status",
-      "text": "Patient Observations",
+      "text": "Tobacco Use Screening Observations",
       "type": "group",
       "repeats": true,
       "item": [
@@ -68,11 +68,13 @@
           "linkId": "1",
           "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.code",
           "text": "Observation code",
-          "type": "choice"
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus"
         },
         {
           "linkId": "2",
-          "definition": "http://hopena.info/StructureDefinition/smoking-weight#Observation.effective[x]",
+          "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.effective[x]",
           "text": "Date",
           "type": "dateTime"
         }

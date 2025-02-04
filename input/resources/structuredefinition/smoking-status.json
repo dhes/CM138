@@ -12,7 +12,7 @@
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-featureExpression",
       "valueExpression": {
         "language": "text/cql.identifier",
-        "expression": "Sleep Study",
+        "expression": "TobaccoUseScreening",
         "reference": "http://hopena.info/Library/Smoking"
       }
     }
@@ -67,6 +67,16 @@
           }
         ],
         "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "UsCoreSmokingStatusPreferred"
+            }
+          ],
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus"
+        },
         "mapping": [
           {
             "identity": "ASLP",
