@@ -10,11 +10,11 @@
             "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
             "containerId": "",
             "name": "general utility",
-            "url": "$cql",
-            "method": "POST",
+            "url": "StructureDefinition",
+            "method": "GET",
             "sortNum": 10000,
             "created": "2025-01-22T20:06:22.356Z",
-            "modified": "2025-02-02T01:49:22.928Z",
+            "modified": "2025-02-04T22:05:08.473Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -856,6 +856,60 @@
                 "raw": "",
                 "form": [],
                 "binary": "../input/resources/questionnaire/smoking.json"
+            }
+        },
+        {
+            "_id": "864c8562-a055-4bf4-a377-73034d19fcf4",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT smoking-height StructureDefinition",
+            "url": "StructureDefinition/smoking-height",
+            "method": "PUT",
+            "sortNum": 540000,
+            "created": "2025-02-04T01:20:42.237Z",
+            "modified": "2025-02-04T01:22:02.317Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/resources/structuredefinition/smoking-height.json"
+            }
+        },
+        {
+            "_id": "ba865b31-fa45-4de4-9530-daf3ce5e07f2",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT smoking-weight StructureDefinition Copy",
+            "url": "StructureDefinition/smoking-weight",
+            "method": "PUT",
+            "sortNum": 550000,
+            "created": "2025-02-04T01:20:47.041Z",
+            "modified": "2025-02-04T01:21:47.016Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/resources/structuredefinition/smoking-weight.json"
+            }
+        },
+        {
+            "_id": "10fe9774-2e35-483c-8c0d-a4288d636e0e",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT smoking-status StructureDefinition",
+            "url": "StructureDefinition/smoking-status",
+            "method": "PUT",
+            "sortNum": 560000,
+            "created": "2025-02-04T22:05:56.901Z",
+            "modified": "2025-02-04T22:06:32.502Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/resources/structuredefinition/smoking-status.json"
             }
         }
     ],

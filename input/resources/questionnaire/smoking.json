@@ -20,7 +20,7 @@
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-      "valueCanonical": "https://hopena.info/Library/Smoking"
+      "valueCanonical": "http://hopena.info/Library/Smoking"
     }
   ],
   "url": "http://hopena.info/Questionnaire/smoking",
@@ -49,10 +49,6 @@
   ],
   "item": [
     {
-      "linkId": "observations-group",
-      "text": "Patient Observations",
-      "type": "group",
-      "repeats": true,
       "extension": [
         {
           "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
@@ -62,30 +58,23 @@
           }
         }
       ],
+      "linkId": "0",
+      "definition": "http://hopena.info/StructureDefinition/smoking-status",
+      "text": "Patient Observations",
+      "type": "group",
+      "repeats": true,
       "item": [
         {
-          "linkId": "observation",
-          "type": "group",
-          "repeats": true,
-          "text": "Individual Observation",
-          "item": [
-            {
-              "linkId": "observation-date",
-              "definition": "http://hl7.org/fhir/StructureDefinition/Observation#effectiveDateTime",
-              "text": "Observation Date",
-              "type": "dateTime",
-              "required": true,
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
-                  "valueExpression": {
-                    "language": "text/cql-identifier",
-                    "expression": "AllObservationDates"
-                  }
-                }
-              ]
-            }
-          ]
+          "linkId": "1",
+          "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.code",
+          "text": "Observation code",
+          "type": "choice"
+        },
+        {
+          "linkId": "2",
+          "definition": "http://hopena.info/StructureDefinition/smoking-weight#Observation.effective[x]",
+          "text": "Date",
+          "type": "dateTime"
         }
       ]
     }
