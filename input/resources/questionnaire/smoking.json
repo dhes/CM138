@@ -54,7 +54,7 @@
           "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
           "valueExpression": {
             "language": "text/cql-identifier",
-            "expression": "TobaccoUseScreenings"
+            "expression": "TobaccoUseScreening"
           }
         }
       ],

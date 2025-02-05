@@ -929,6 +929,24 @@
                 "form": [],
                 "binary": "../input/vocabulary/valueset/external/ValueSet-us-core-observation-smokingstatus.json"
             }
+        },
+        {
+            "_id": "e7bac2c6-7b9c-4a66-a7b7-4040f64a8eb1",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT Smoking Library",
+            "url": "Library/Smoking",
+            "method": "PUT",
+            "sortNum": 580000,
+            "created": "2025-02-04T23:56:56.974Z",
+            "modified": "2025-02-04T23:59:26.039Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/resources/library/Smoking.json"
+            }
         }
     ],
     "settings": {
