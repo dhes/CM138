@@ -24,11 +24,11 @@
     }
   ],
   "url": "http://hopena.info/Questionnaire/smoking",
-  "name": "smoking",
-  "title": "smoking",
+  "name": "name smoking",
+  "title": "Tobacco Use Screening History",
   "status": "active",
   "experimental": false,
-  "description": "smoking",
+  "description": "description smoking",
   "useContext": [
     {
       "code": {
@@ -60,23 +60,93 @@
       ],
       "linkId": "0",
       "definition": "http://hopena.info/StructureDefinition/smoking-status",
-      "text": "Tobacco Use Screening Observations",
+      "text": "",
       "type": "group",
       "repeats": true,
       "item": [
         {
           "linkId": "1",
-          "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.code",
-          "text": "Observation code",
-          "type": "choice",
-          "required": true,
-          "answerValueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus"
-        },
-        {
-          "linkId": "2",
           "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.effective[x]",
           "text": "Date",
           "type": "dateTime"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2",
+          "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.value[x]",
+          "text": "Value",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA18976-3",
+                "display": "Current every day smoker"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA18977-1",
+                "display": "Current some day smoker"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA15920-4",
+                "display": "Former smoker"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA18978-9",
+                "display": "Never smoker"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA18979-7",
+                "display": "Smoker, current status unknown"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA18980-5",
+                "display": "Unknown if ever smoked"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA18981-3",
+                "display": "Heavy tobacco smoker"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA18982-1",
+                "display": "Light tobacco smoker"
+              }
+            }
+          ]
         }
       ]
     }

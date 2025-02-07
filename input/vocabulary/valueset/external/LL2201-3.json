@@ -1,0 +1,89 @@
+{
+  "resourceType": "ValueSet",
+  "id": "LL2201-3",
+  "meta": {
+    "extension": [ {
+      "url": "http://hapifhir.io/fhir/StructureDefinition/valueset-expansion-message",
+      "valueString": "ValueSet was expanded using an expansion that was pre-calculated at 2024-08-07T17:17:28.329+00:00 (183 days ago)"
+    } ],
+    "versionId": "14"
+  },
+  "url": "http://loinc.org/vs/LL2201-3",
+  "status": "active",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "LA18976-3",
+        "display": "Current every day smoker"
+      }, {
+        "code": "LA18977-1",
+        "display": "Current some day smoker"
+      }, {
+        "code": "LA15920-4",
+        "display": "Former smoker"
+      }, {
+        "code": "LA18978-9",
+        "display": "Never smoker"
+      }, {
+        "code": "LA18979-7",
+        "display": "Smoker, current status unknown"
+      }, {
+        "code": "LA18980-5",
+        "display": "Unknown if ever smoked"
+      }, {
+        "code": "LA18981-3",
+        "display": "Heavy tobacco smoker"
+      }, {
+        "code": "LA18982-1",
+        "display": "Light tobacco smoker"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "identifier": "27fbaa81-25d1-4500-bdf0-9b47bdfcd6f1",
+    "timestamp": "2025-02-07T01:45:17+00:00",
+    "total": 8,
+    "offset": 0,
+    "parameter": [ {
+      "name": "offset",
+      "valueInteger": 0
+    }, {
+      "name": "count",
+      "valueInteger": 1000
+    } ],
+    "contains": [ {
+      "system": "http://loinc.org",
+      "code": "LA18976-3",
+      "display": "Current every day smoker"
+    }, {
+      "system": "http://loinc.org",
+      "code": "LA18977-1",
+      "display": "Current some day smoker"
+    }, {
+      "system": "http://loinc.org",
+      "code": "LA15920-4",
+      "display": "Former smoker"
+    }, {
+      "system": "http://loinc.org",
+      "code": "LA18978-9",
+      "display": "Never smoker"
+    }, {
+      "system": "http://loinc.org",
+      "code": "LA18979-7",
+      "display": "Smoker, current status unknown"
+    }, {
+      "system": "http://loinc.org",
+      "code": "LA18980-5",
+      "display": "Unknown if ever smoked"
+    }, {
+      "system": "http://loinc.org",
+      "code": "LA18981-3",
+      "display": "Heavy tobacco smoker"
+    }, {
+      "system": "http://loinc.org",
+      "code": "LA18982-1",
+      "display": "Light tobacco smoker"
+    } ]
+  }
+}

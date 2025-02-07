@@ -103,6 +103,36 @@
             "map": "ALSP.A1.DE15"
           }
         ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "An Observation value",
+        "definition": "An Observation value",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "Smoking Status Options"
+            }
+          ],
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus"
+        },
+        "mapping": [
+          {
+            "identity": "ASLP",
+            "map": "ASLP.A1.DE19"
+          }
+        ]
       }
     ]
   }
