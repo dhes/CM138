@@ -5,3 +5,5 @@ input-cache/
 /input/vocabulary/.DS_Store
 **/.DS_Store
 bundles/
+.env
+.DS_Store
