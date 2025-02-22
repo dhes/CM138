@@ -1,0 +1,44 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "demographics2",
+  "url": "http://hopena.info/StructureDefinition/demographics2",
+  "version": "1.0.0",
+  "name": "Demographics2",
+  "title": "Demographics2 Profile for Patient",
+  "status": "draft",
+  "experimental": false,
+  "date": "2025-02-08T00:00:00+00:00",
+  "publisher": "Your Organization",
+  "description": "A profile that slices Patient.name to designate a primary name.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "use"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.name:primary",
+        "path": "Patient.name",
+        "sliceName": "primary",
+        "min": 1,
+        "max": "1",
+        "definition": "The primary name of the patient."
+      }
+    ]
+  }
+}

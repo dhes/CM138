@@ -1,0 +1,90 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "demographics",
+  "url": "http://hopena.info/StructureDefinition/demographics",
+  "name": "demographics",
+  "title": "demographics",
+  "status": "draft",
+  "experimental": false,
+  "description": "demographics",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "task",
+        "display": "Workflow Task"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://fhir.org/guides/nachc/hiv-cds/CodeSystem/activity-codes",
+            "code": "ASLP.A1",
+            "display": "Adult Sleep Studies"
+          }
+        ]
+      }
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "ASLP"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient",
+        "path": "Patient",
+        "mustSupport": false
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "short": "A Patient name",
+        "definition": "A Patient name",
+        "comment": "A Patient name",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "HumanName"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "ASLP",
+            "map": "ASLP.A1.DE1"
+          }
+        ]
+      },
+      {
+        "id": "Patient.name.family",
+        "path": "Patient.name.family",
+        "short": "A Patient name.family",
+        "definition": "A Patient family name",
+        "comment": "A Patient family name",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "ASLP",
+            "map": "ASLP.A1.DE1"
+          }
+        ]
+      }
+    ]
+  }
+}

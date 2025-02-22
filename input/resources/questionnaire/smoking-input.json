@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "smoking",
+  "id": "smoking-input",
   "extension": [
     {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
@@ -25,10 +25,10 @@
   ],
   "url": "http://hopena.info/Questionnaire/smoking",
   "name": "name smoking",
-  "title": "Tobacco Use Screening History",
+  "title": "New Tobacco Status",
   "status": "active",
   "experimental": false,
-  "description": "description smoking",
+  "description": "Blank form for input of new smoking status entry. This form is not meant to be pre-populated.",
   "useContext": [
     {
       "code": {
@@ -51,7 +51,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext",
           "valueExpression": {
             "language": "text/cql-identifier",
             "expression": "TobaccoUseScreening"
@@ -69,7 +69,7 @@
           "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.effective[x]",
           "text": "Date",
           "type": "dateTime",
-          "readOnly": true
+					"readOnly": true
         },
         {
           "extension": [
@@ -89,8 +89,7 @@
           "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.value[x]",
           "text": "Value",
           "type": "choice",
-          "readOnly": true,
-          "required": true,
+					"readOnly": true,
           "answerOption": [
             {
               "valueCoding": {

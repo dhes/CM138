@@ -1,4 +1,4 @@
-library Smoking
+library Smoking version '0.0.001'
 
 using FHIR version '4.0.1'
 
@@ -13,3 +13,9 @@ define AllObservations:
 
 define TobaccoUseScreening:
   [Observation: "Tobacco Use Screening"]
+
+define MostRecentTobaccoUseScreening:
+  Last([Observation: "Tobacco Use Screening"])
+
+define selectedPatient:
+  Patient

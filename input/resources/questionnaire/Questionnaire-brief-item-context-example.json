@@ -1,0 +1,194 @@
+{
+	"resourceType": "Questionnaire",
+	"id":"brief-item-context-example",
+	"extension": [
+		{
+			"extension": [
+				{
+					"url": "name",
+					"valueCoding": {
+						"system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext",
+						"code": "patient",
+						"display": "Patient"
+					}
+				},
+				{
+					"url": "type",
+					"valueCode": "Patient"
+				},
+				{
+					"url": "description",
+					"valueString": "The patient that is to be used to pre-populate the form"
+				}
+			],
+			"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+		}
+	],
+	"item": [
+		{
+			"extension": [
+				{
+					"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext",
+					"valueExpression": {
+						"description": "Home address of the patient",
+						"expression": "%patient.address.where(use='home')[0]",
+						"language": "text/fhirpath"
+					}
+				},
+				{
+					"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext",
+					"valueExpression": {
+						"description": "Home address of the patient",
+						"expression": "%patient.address.where(use='home')[0]",
+						"language": "text/fhirpath"
+					}
+				}
+			],
+			"item": [
+				{
+					"linkId": "4.6.1",
+					"text": "Home Address",
+					"type": "display"
+				},
+				{
+					"definition": "http://hl7.org/fhir/StructureDefinition/Patient#Patient.address.line",
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"description": "Address Line 1",
+								"expression": "line[0]",
+								"language": "text/fhirpath"
+							}
+						}
+					],
+					"linkId": "4.6.2",
+					"text": "Address",
+					"type": "string"
+				},
+				{
+					"definition": "http://hl7.org/fhir/StructureDefinition/Patient#Patient.address.city",
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"description": "City",
+								"expression": "city",
+								"language": "text/fhirpath"
+							}
+						}
+					],
+					"linkId": "4.6.3",
+					"text": "City",
+					"type": "string"
+				},
+				{
+					"answerOption": [
+						{
+							"valueCoding": {
+								"code": "Alberta",
+								"display": "Alberta",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "BritishColumbia",
+								"display": "British Columbia",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "Manitoba",
+								"display": "Manitoba",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "NewBrunswick",
+								"display": "New Brunswick",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "NewfoundlandAndLabrador",
+								"display": "Newfoundland and Labrador",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "NovaScotia",
+								"display": "Nova Scotia",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "Ontario",
+								"display": "Ontario",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "PrinceEdwardIsland",
+								"display": "Prince Edward Island",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "Quebec",
+								"display": "Quebec",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "Saskatchewan",
+								"display": "Saskatchewan",
+								"system": "http://example.org/CodeSystem/provinces"
+							}
+						}
+					],
+					"definition": "http://hl7.org/fhir/StructureDefinition/Patient#Patient.address.state",
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"description": "State",
+								"expression": "state",
+								"language": "text/fhirpath"
+							}
+						}
+					],
+					"linkId": "4.6.4",
+					"text": "Province",
+					"type": "choice"
+				},
+				{
+					"definition": "http://hl7.org/fhir/StructureDefinition/Patient#Patient.address.postalCode",
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+							"valueExpression": {
+								"description": "Postal Code",
+								"expression": "postalCode",
+								"language": "text/fhirpath"
+							}
+						}
+					],
+					"linkId": "4.6.5",
+					"text": "Postal Code",
+					"type": "string"
+				}
+			],
+			"linkId": "4.6",
+			"type": "group"
+		}
+	]
+}

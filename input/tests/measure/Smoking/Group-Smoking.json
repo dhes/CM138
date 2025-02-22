@@ -1,0 +1,22 @@
+{
+  "resourceType": "Group",
+  "id": "Smoking",
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/artifact-testArtifact",
+    "valueCanonical": "http://ecqi.healthit.gov/ecqms/Measure/Smoking"
+  } ],
+  "active": true,
+  "type": "person",
+  "actual": true,
+  "member": [ {
+    "entity": {
+      "reference": "Patient/tus-screened",
+      "display": "John Doe"
+    }
+  }, {
+    "entity": {
+      "reference": "Patient/tus-not-screened",
+      "display": "John Doe"
+    }
+  } ]
+}
