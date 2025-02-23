@@ -17,5 +17,8 @@ define TobaccoUseScreening:
 define MostRecentTobaccoUseScreening:
   Last([Observation: "Tobacco Use Screening"])
 
-define selectedPatient:
-  Patient
+define PatientId:
+  Patient.id
+
+define PatientIdString:
+  First(Split(Patient.id, '/'))

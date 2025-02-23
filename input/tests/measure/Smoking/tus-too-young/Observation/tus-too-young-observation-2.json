@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "tus-too-young-observation-2",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey",
+          "display": "Survey"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "72166-2",
+        "display": "Tobacco use screening"
+      }
+    ],
+    "text": "Tobacco use screening"
+  },
+  "subject": {
+    "reference": "Patient/tus-too-young"
+  },
+  "effectiveDateTime": "2020-01-01",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "LA18978-9",
+        "display": "Never smoker"
+      }
+    ],
+    "text": "Never smoker"
+  }
+}

@@ -10,11 +10,11 @@
             "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
             "containerId": "",
             "name": "general utility",
-            "url": "Questionnaire/smoking-input",
+            "url": "StructureDefinition/demographics",
             "method": "GET",
             "sortNum": 10000,
             "created": "2025-01-22T20:06:22.356Z",
-            "modified": "2025-02-22T00:24:49.954Z",
+            "modified": "2025-02-23T01:51:28.915Z",
             "headers": []
         },
         {
@@ -1211,6 +1211,78 @@
                 "raw": "",
                 "form": [],
                 "binary": "../input/resources/questionnaire/smoking-input.json"
+            }
+        },
+        {
+            "_id": "742de6ec-b699-4cc8-87a5-0dceb3d9b55b",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT StructureDefinition-patient",
+            "url": "StructureDefinition/Patient",
+            "method": "PUT",
+            "sortNum": 780000,
+            "created": "2025-02-22T21:47:46.506Z",
+            "modified": "2025-02-22T21:48:32.330Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/resources/structuredefinition/StructureDefinition-patient.json"
+            }
+        },
+        {
+            "_id": "cafed764-540e-4f79-a76f-2cffa731f00b",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT Patient-tus-too-young",
+            "url": "Patient/tus-too-young",
+            "method": "PUT",
+            "sortNum": 790000,
+            "created": "2025-02-22T23:32:43.512Z",
+            "modified": "2025-02-22T23:33:10.295Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/tests/measure/Smoking/tus-too-young/Patient/Patient-tus-too-young.json"
+            }
+        },
+        {
+            "_id": "ac964910-69e2-4184-9a8a-e8ba0ee25e14",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT Observation-tus-too-young-observation",
+            "url": "Observation/tus-too-young-observation",
+            "method": "PUT",
+            "sortNum": 800000,
+            "created": "2025-02-22T23:33:43.824Z",
+            "modified": "2025-02-22T23:35:01.814Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/tests/measure/Smoking/tus-too-young/Observation/observation-tus-too-young.json"
+            }
+        },
+        {
+            "_id": "c0cafae4-e269-4f38-b8f2-5b287f7c3808",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT Observation-ttus-too-young-observation-2",
+            "url": "Observation/tus-too-young-observation-2",
+            "method": "PUT",
+            "sortNum": 810000,
+            "created": "2025-02-22T23:35:10.535Z",
+            "modified": "2025-02-22T23:36:02.737Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/tests/measure/Smoking/tus-too-young/Observation/tus-too-young-observation-2.json"
             }
         }
     ],

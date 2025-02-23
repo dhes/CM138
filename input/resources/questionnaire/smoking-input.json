@@ -23,12 +23,12 @@
       "valueCanonical": "http://hopena.info/Library/Smoking"
     }
   ],
-  "url": "http://hopena.info/Questionnaire/smoking",
-  "name": "name smoking",
+  "url": "http://hopena.info/Questionnaire/smoking-input",
+  "name": "name smoking input",
   "title": "New Tobacco Status",
   "status": "active",
   "experimental": false,
-  "description": "Blank form for input of new smoking status entry. This form is not meant to be pre-populated.",
+  "description": "Blank form for input of new smoking status entry.",
   "useContext": [
     {
       "code": {
@@ -51,13 +51,20 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext",
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
           "valueExpression": {
             "language": "text/cql-identifier",
-            "expression": "TobaccoUseScreening"
+            "expression": "PatientIdString"
           }
         }
       ],
+      "linkId": "patient.id",
+      "definition": "http://hopena.info/StructureDefinition/demographics#Patient.id",
+      "text": "Patient ID",
+      "type": "string",
+			"readOnly": true
+    },
+    {
       "linkId": "0",
       "definition": "http://hopena.info/StructureDefinition/smoking-status",
       "text": "",
@@ -68,8 +75,7 @@
           "linkId": "1",
           "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.effective[x]",
           "text": "Date",
-          "type": "dateTime",
-					"readOnly": true
+          "type": "dateTime"
         },
         {
           "extension": [
@@ -89,7 +95,6 @@
           "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.value[x]",
           "text": "Value",
           "type": "choice",
-					"readOnly": true,
           "answerOption": [
             {
               "valueCoding": {

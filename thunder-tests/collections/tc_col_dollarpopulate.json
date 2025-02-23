@@ -403,6 +403,23 @@
                 "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    },\n    {\n      \"name\": \"context\",\n      \"part\": [\n        {\n          \"name\": \"name\",\n          \"valueString\": \"patient\"\n        },\n        {\n          \"name\": \"content\",\n          \"valueReference\": {\n            \"reference\": \"Patient/tus-screened\"\n          }\n        },\n        {\n          \"name\": \"name\",\n          \"valueString\": \"debugMode\"\n        },\n        {\n          \"name\": \"content\",\n          \"valueBoolean\": true\n        }\n      ]\n    }\n  ]\n}",
                 "form": []
             }
+        },
+        {
+            "_id": "d1a852b6-e244-4339-89d2-a43a7c97c9eb",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "$populate smoking-input with tus-screened",
+            "url": "Questionnaire/smoking-input/$populate",
+            "method": "POST",
+            "sortNum": 207500,
+            "created": "2025-02-22T22:24:44.293Z",
+            "modified": "2025-02-22T23:39:56.214Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    }\n  ]\n}",
+                "form": []
+            }
         }
     ],
     "settings": {

@@ -78,5 +78,24 @@
         "created": "2025-02-01T23:44:31.620Z",
         "modified": "2025-02-01T23:44:31.620Z",
         "headers": []
+    },
+    {
+        "_id": "79b558f7-d8e7-445d-a9b7-38ba67c0fa18",
+        "colId": "history",
+        "containerId": "",
+        "name": "https://hl7.org/fhir/StructureDefinition/Patient",
+        "url": "StructureDefinition?url=http://hl7.org/fhir/StructureDefinition/Patient",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2025-02-22T21:25:50.383Z",
+        "modified": "2025-02-22T21:51:06.904Z",
+        "headers": [],
+        "params": [
+            {
+                "name": "url",
+                "value": "http://hl7.org/fhir/StructureDefinition/Patient",
+                "isPath": false
+            }
+        ]
     }
 ]
