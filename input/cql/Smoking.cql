@@ -22,3 +22,6 @@ define PatientId:
 
 define PatientIdString:
   First(Split(Patient.id, '/'))
+
+define PatientFullName:
+  First(Patient.name).given[0] + ' ' + First(Patient.name).family
