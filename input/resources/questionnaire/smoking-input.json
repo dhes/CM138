@@ -54,6 +54,22 @@
           "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
           "valueExpression": {
             "language": "text/cql-identifier",
+            "expression": "PatientIdString"
+          }
+        }
+      ],
+      "linkId": "patient.id",
+      "definition": "http://hopena.info/StructureDefinition/demographics#Patient.id",
+      "text": "Patient ID",
+      "type": "display",
+      "readOnly": true
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+          "valueExpression": {
+            "language": "text/cql-identifier",
             "expression": "PatientFullName"
           }
         }
@@ -61,24 +77,39 @@
       "linkId": "patient.name",
       "definition": "http://hopena.info/StructureDefinition/demographics#Patient.name",
       "text": "Patient Name",
-      "type": "string",
-			"readOnly": true
+      "type": "display",
+      "readOnly": true
     },
     {
       "linkId": "0",
-      "definition": "http://hopena.info/StructureDefinition/smoking-status",
       "text": "",
       "type": "group",
       "repeats": true,
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            }
+          ],
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco use screening"
+            }
+          ],
           "linkId": "1",
-          "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.effective[x]",
           "text": "Date",
           "type": "dateTime"
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
               "valueCodeableConcept": {
@@ -91,8 +122,14 @@
               }
             }
           ],
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco use screening"
+            }
+          ],
           "linkId": "2",
-          "definition": "http://hopena.info/StructureDefinition/smoking-status#Observation.value[x]",
           "text": "Value",
           "type": "choice",
           "answerOption": [

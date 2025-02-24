@@ -1,0 +1,44 @@
+{
+  "item": {
+    "extension": [
+      {
+        "valueBoolean": true,
+        "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+      }
+    ],
+    "linkId": "code-pop-demo",
+    "code": [
+      {
+        "system": "http://loinc.org",
+        "code": "29463-7",
+        "display": "Body weight"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3141-9",
+        "display": "Body weight Measured"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8341-0",
+        "display": "Dry body weight Measured"
+      }
+    ],
+    "text": "What is your current weight?",
+    "type": "quantity",
+    "answerOption": [
+      {
+        "valueCoding": {
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      {
+        "valueCoding": {
+          "system": "http://unitsofmeasure.org",
+          "code": "[lb_av]"
+        }
+      }
+    ]
+  }
+}
