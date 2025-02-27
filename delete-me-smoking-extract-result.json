@@ -1,0 +1,221 @@
+{
+  "resourceType": "Bundle",
+  "id": "extract-null",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "extract-null.1",
+        "contained": [
+          {
+            "resourceType": "QuestionnaireResponse",
+            "id": "ac3526b0-62a5-45ed-b3ed-319ac03b7dfc",
+            "meta": {
+              "profile": [
+                "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|3.0"
+              ],
+              "tag": [
+                {
+                  "code": "lformsVersion: 36.3.2"
+                }
+              ]
+            },
+            "questionnaire": "http://hopena.info/Questionnaire/smoking-input",
+            "status": "completed",
+            "subject": {
+              "reference": "Patient/tus-screened"
+            },
+            "authored": "2025-02-24T19:26:04.908Z",
+            "item": [
+              {
+                "linkId": "0",
+                "item": [
+                  {
+                    "linkId": "1",
+                    "text": "Date",
+                    "answer": [
+                      {
+                        "valueDateTime": "2025-02-24T19:25:56.894Z"
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "2",
+                    "text": "Value",
+                    "answer": [
+                      {
+                        "valueCoding": {
+                          "system": "http://loinc.org",
+                          "code": "LA18978-9",
+                          "display": "Never smoker"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/derivedFromLinkId",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "1"
+              }
+            ]
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco use screening"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/tus-screened"
+        },
+        "effectiveDateTime": "2025-02-24T19:26:04.908Z",
+        "issued": "2025-02-24T19:26:04.908+00:00",
+        "valueDateTime": "2025-02-24T19:25:56.894Z",
+        "derivedFrom": [
+          {
+            "reference": "#ac3526b0-62a5-45ed-b3ed-319ac03b7dfc"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/extract-null.1"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "extract-null.2",
+        "contained": [
+          {
+            "resourceType": "QuestionnaireResponse",
+            "id": "ac3526b0-62a5-45ed-b3ed-319ac03b7dfc",
+            "meta": {
+              "profile": [
+                "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|3.0"
+              ],
+              "tag": [
+                {
+                  "code": "lformsVersion: 36.3.2"
+                }
+              ]
+            },
+            "questionnaire": "http://hopena.info/Questionnaire/smoking-input",
+            "status": "completed",
+            "subject": {
+              "reference": "Patient/tus-screened"
+            },
+            "authored": "2025-02-24T19:26:04.908Z",
+            "item": [
+              {
+                "linkId": "0",
+                "item": [
+                  {
+                    "linkId": "1",
+                    "text": "Date",
+                    "answer": [
+                      {
+                        "valueDateTime": "2025-02-24T19:25:56.894Z"
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "2",
+                    "text": "Value",
+                    "answer": [
+                      {
+                        "valueCoding": {
+                          "system": "http://loinc.org",
+                          "code": "LA18978-9",
+                          "display": "Never smoker"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/derivedFromLinkId",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "2"
+              }
+            ]
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco use screening"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/tus-screened"
+        },
+        "effectiveDateTime": "2025-02-24T19:26:04.908Z",
+        "issued": "2025-02-24T19:26:04.908+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA18978-9",
+              "display": "Never smoker"
+            }
+          ]
+        },
+        "derivedFrom": [
+          {
+            "reference": "#ac3526b0-62a5-45ed-b3ed-319ac03b7dfc"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/extract-null.2"
+      }
+    }
+  ]
+}
