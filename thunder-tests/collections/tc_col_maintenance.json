@@ -10,11 +10,11 @@
             "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
             "containerId": "",
             "name": "general utility",
-            "url": "StructureDefinition/demographics",
-            "method": "GET",
+            "url": "Observation/904",
+            "method": "DELETE",
             "sortNum": 10000,
             "created": "2025-01-22T20:06:22.356Z",
-            "modified": "2025-02-23T01:51:28.915Z",
+            "modified": "2025-02-28T00:34:30.596Z",
             "headers": []
         },
         {
