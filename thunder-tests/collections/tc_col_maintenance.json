@@ -10,11 +10,11 @@
             "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
             "containerId": "",
             "name": "general utility",
-            "url": "Observation/904",
-            "method": "DELETE",
+            "url": "Patient/tus-screened",
+            "method": "GET",
             "sortNum": 10000,
             "created": "2025-01-22T20:06:22.356Z",
-            "modified": "2025-02-28T00:34:30.596Z",
+            "modified": "2025-03-02T02:21:40.643Z",
             "headers": []
         },
         {
@@ -1283,6 +1283,42 @@
                 "raw": "",
                 "form": [],
                 "binary": "../input/tests/measure/Smoking/tus-too-young/Observation/tus-too-young-observation-2.json"
+            }
+        },
+        {
+            "_id": "78a405ba-4912-45a0-acf6-2ec1b403fe80",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "PUT PlanDefinition-smoking",
+            "url": "PlanDefinition/Smoking",
+            "method": "PUT",
+            "sortNum": 820000,
+            "created": "2025-02-28T21:21:33.883Z",
+            "modified": "2025-02-28T21:22:37.778Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/resources/plandefinition/PlanDefinition - smoking.json"
+            }
+        },
+        {
+            "_id": "e8854422-0ae7-48ce-b950-d106a5cee694",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "POST PlanDefinition-Smoking bundle",
+            "url": "",
+            "method": "POST",
+            "sortNum": 830000,
+            "created": "2025-03-02T17:34:03.578Z",
+            "modified": "2025-03-02T17:34:54.725Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../bundles/plandefinition/PlanDefinition - smoking/PlanDefinition - smoking-bundle.json"
             }
         }
     ],

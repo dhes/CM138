@@ -24,8 +24,8 @@ context Patient
 // define PatientIdString:
 //   First(Split(Patient.id, '/'))
 
-// define PatientFullName:
-//   First(Patient.name).given[0] + ' ' + First(Patient.name).family
+define PatientFullName:
+  First(Patient.name).given[0] + ' ' + First(Patient.name).family
 
 define "Age":
   AgeInYears()
