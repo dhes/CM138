@@ -11,8 +11,8 @@ context Patient
 // define AllObservations:
 //   [Observation]
 
-// define TobaccoUseScreening:
-//   [Observation: "Tobacco Use Screening"]
+define TobaccoUseScreening:
+  [Observation: "Tobacco Use Screening"]
 
 // define MostRecentTobaccoUseScreening:
 //   Last([Observation: "Tobacco Use Screening"])
