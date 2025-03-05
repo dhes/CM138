@@ -42,27 +42,17 @@
   "library": ["http://ecqi.healthit.gov/ecqms/Library/Smoking"],
   "action": [
     {
-      "title": "Patient Last Name",
-      "description": "Last name of the patient to whom the PlanDefinition is being applied.",
-      "dynamicValue": [
-        {
-          "path": "action.description",
-          "expression": {
-            "language": "text/cql-expression",
-            "expression": "%subject.name[0].family"
-          }
-        }
-      ]
-    },
-    {
-      "title": "Take Smoking History",
-      "description": "Advise clinician or patient that a repeat smoking status history is due.",
+      "title": "Update Smoking History",
+      "description": "Prompt for new smoking status while displaying history",
       "trigger": [
         {
           "type": "named-event",
           "name": "patient-view"
         }
       ],
+      "resource": {
+        "reference": "Questionnaire/smoking-combined"
+      },
       "condition": [
         {
           "kind": "applicability",
@@ -72,19 +62,13 @@
           }
         }
       ],
-      "action": [
+      "dynamicValue": [
         {
-          "title": "Patient",
-          "description": "Last name of the patient to whom the PlanDefinition is being applied.",
-          "dynamicValue": [
-            {
-              "path": "action.description",
-              "expression": {
-                "language": "text/cql-identifier",
-                "expression": "PatientFullName"
-              }
-            }
-          ]
+          "path": "action.description",
+          "expression": {
+            "language": "text/fhirpath",
+            "expression": "'/combined-smoking-form?patientId=' + %subject.id"
+          }
         }
       ]
     }
