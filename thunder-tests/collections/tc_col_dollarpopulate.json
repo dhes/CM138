@@ -420,6 +420,23 @@
                 "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    }\n  ]\n}",
                 "form": []
             }
+        },
+        {
+            "_id": "6468111f-f1b1-4d8d-b56e-347dd2ae8895",
+            "colId": "1f23275b-21f9-45b2-884a-89a1e899ee14",
+            "containerId": "",
+            "name": "$populate Q-smoking-combined",
+            "url": "Questionnaire/smoking-combined/$populate",
+            "method": "POST",
+            "sortNum": 217500,
+            "created": "2025-03-04T23:25:01.949Z",
+            "modified": "2025-03-04T23:26:42.542Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-screened\"\n      }\n    }\n  ]\n}",
+                "form": []
+            }
         }
     ],
     "settings": {

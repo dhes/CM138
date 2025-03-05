@@ -10,11 +10,11 @@
             "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
             "containerId": "",
             "name": "general utility",
-            "url": "Patient/tus-screened",
-            "method": "GET",
+            "url": "Observation/1309",
+            "method": "DELETE",
             "sortNum": 10000,
             "created": "2025-01-22T20:06:22.356Z",
-            "modified": "2025-03-02T02:21:40.643Z",
+            "modified": "2025-03-05T04:30:59.218Z",
             "headers": []
         },
         {
@@ -1319,6 +1319,24 @@
                 "raw": "",
                 "form": [],
                 "binary": "../bundles/plandefinition/PlanDefinition - smoking/PlanDefinition - smoking-bundle.json"
+            }
+        },
+        {
+            "_id": "d1f93524-cbf9-477d-85d9-0ff8b2c2db4c",
+            "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
+            "containerId": "",
+            "name": "POST Q-smoking-combined",
+            "url": "Questionnaire/smoking-combined",
+            "method": "PUT",
+            "sortNum": 840000,
+            "created": "2025-03-04T23:24:01.671Z",
+            "modified": "2025-03-04T23:24:28.650Z",
+            "headers": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/resources/questionnaire/Questionnaire-smoking-combined.json"
             }
         }
     ],
