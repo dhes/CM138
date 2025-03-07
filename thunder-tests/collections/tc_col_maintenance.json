@@ -10,24 +10,12 @@
             "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
             "containerId": "",
             "name": "general utility",
-            "url": "Observation?patient=Patient/tus-screened&code=72166-2",
-            "method": "GET",
+            "url": "Observation/1354",
+            "method": "DELETE",
             "sortNum": 10000,
             "created": "2025-01-22T20:06:22.356Z",
-            "modified": "2025-03-06T23:53:49.062Z",
+            "modified": "2025-03-07T01:49:51.075Z",
             "headers": [],
-            "params": [
-                {
-                    "name": "patient",
-                    "value": "Patient/tus-screened",
-                    "isPath": false
-                },
-                {
-                    "name": "code",
-                    "value": "72166-2",
-                    "isPath": false
-                }
-            ],
             "body": {
                 "type": "binary",
                 "raw": "",
@@ -862,13 +850,13 @@
             "method": "PUT",
             "sortNum": 530000,
             "created": "2025-02-02T00:58:35.159Z",
-            "modified": "2025-02-02T00:59:25.695Z",
+            "modified": "2025-03-07T01:53:27.430Z",
             "headers": [],
             "body": {
                 "type": "binary",
                 "raw": "",
                 "form": [],
-                "binary": "../input/resources/questionnaire/smoking.json"
+                "binary": "../input/resources/questionnaire/Questionnaire-smoking.json"
             }
         },
         {
@@ -1222,13 +1210,13 @@
             "method": "PUT",
             "sortNum": 770000,
             "created": "2025-02-22T00:12:15.915Z",
-            "modified": "2025-02-26T23:44:45.360Z",
+            "modified": "2025-03-07T01:14:59.412Z",
             "headers": [],
             "body": {
                 "type": "binary",
                 "raw": "",
                 "form": [],
-                "binary": "../input/resources/questionnaire/smoking-input.json"
+                "binary": "../input/resources/questionnaire/Questionnaire-smoking-input.json"
             }
         },
         {
