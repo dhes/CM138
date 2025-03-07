@@ -91,50 +91,7 @@
           "type": "choice",
           "readOnly": true,
           "required": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "449868002",
-                "display": "Current every day smoker"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "230059006",
-                "display": "Current some day smoker"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "428061000124105",
-                "display": "Light tobacco smoker"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "8517006",
-                "display": "Former smoker"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "881671000124101",
-                "display": "Never smoker"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "428071000124103",
-                "display": "Heavy tobacco smoker"
-              }
-            }
-          ]
+          "answerValueset": "http://hopena.info/ValueSet/tobacco-users-and-non-users"
         }
       ]
     }

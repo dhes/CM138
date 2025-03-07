@@ -35,10 +35,10 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "system": "http://loinc.org",
-        "code": "LA18978-9",
-        "display": "Never smoker"
-      }
+				"system": "http://snomed.info/sct",
+				"code": "881671000124101",
+				"display": "Never smoker"
+			}
     ],
     "text": "Never smoker"
   }
