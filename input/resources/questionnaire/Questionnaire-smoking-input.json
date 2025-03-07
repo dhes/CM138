@@ -80,22 +80,9 @@
         {
           "valueCoding": {
             "system": "http://snomed.info/sct",
-            "code": "449868002",
-            "display": "Current every day smoker"
-          }
-        },
-        {
-          "valueCoding": {
-            "system": "http://snomed.info/sct",
-            "code": "230059006",
-            "display": "Current some day smoker"
-          }
-        },
-        {
-          "valueCoding": {
-            "system": "http://snomed.info/sct",
-            "code": "428061000124105",
-            "display": "Light tobacco smoker"
+            "version": "2023-09",
+            "code": "77176002",
+            "display": "Smoker"
           }
         },
         {
@@ -110,13 +97,6 @@
             "system": "http://snomed.info/sct",
             "code": "881671000124101",
             "display": "Never smoker"
-          }
-        },
-        {
-          "valueCoding": {
-            "system": "http://snomed.info/sct",
-            "code": "428071000124103",
-            "display": "Heavy tobacco smoker"
           }
         }
       ]
