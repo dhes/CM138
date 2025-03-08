@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "tus-screened-observation-2",
+  "id": "tus-former-observation",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
@@ -29,17 +29,17 @@
     "text": "Tobacco use screening"
   },
   "subject": {
-    "reference": "Patient/tus-screened"
+    "reference": "Patient/tus-former"
   },
-  "effectiveDateTime": "2023-01-01",
+  "effectiveDateTime": "2025-01-01",
   "valueCodeableConcept": {
     "coding": [
       {
-        "system": "http://snomed.info/sct",
-        "code": "881671000124101",
-        "display": "Never smoker"
-      }
+				"system": "http://snomed.info/sct",
+				"code": "77176002",
+				"display": "Smoker"
+			}
     ],
-    "text": "Never smoker"
+    "text": "Smoker"
   }
 }

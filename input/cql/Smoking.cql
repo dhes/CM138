@@ -5,6 +5,7 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.4.000' called FHIRHelpers
 
 valueset "Tobacco Use Screening": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1278'
+valueset "Tobacco User": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1170'
 
 context Patient
 
@@ -52,6 +53,12 @@ define "HasUpToDateTobaccoUseScreening":
     and (
       "MostRecentTobaccoUseScreening".effective.value >= "StartOfCurrentYear"
     )
+
+define MosMostRecentTobaccoUseScreeningValue:
+  "MostRecentTobaccoUseScreening".value.code
+
+define Smoker:
+	"MostRecentTobaccoUseScreening".value as CodeableConcept in "Tobacco User"
 
 define "TobaccoUseScreeningNotUpToDate":
   not "HasUpToDateTobaccoUseScreening"

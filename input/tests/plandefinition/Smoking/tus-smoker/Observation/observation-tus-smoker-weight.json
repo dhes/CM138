@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-	"id": "tus-screened-weight",
+	"id": "tus-smoker-weight",
   "status": "final",
   "code": {
     "coding": [
@@ -12,7 +12,7 @@
     ]
   },
   "subject": {
-    "reference": "Patient/tus-screened"
+    "reference": "Patient/tus-smoker"
   },
   "effectiveDateTime": "2025-01-28T10:30:00Z",
   "valueQuantity": {

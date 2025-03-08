@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "tus-screened-observation",
+  "id": "tus-never-observation",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"
@@ -29,9 +29,9 @@
     "text": "Tobacco use screening"
   },
   "subject": {
-    "reference": "Patient/tus-screened"
+    "reference": "Patient/tus-never"
   },
-  "effectiveDateTime": "2024-01-01",
+  "effectiveDateTime": "2025-01-01",
   "valueCodeableConcept": {
     "coding": [
       {

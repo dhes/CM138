@@ -1,8 +1,8 @@
 {
   "resourceType": "RelatedPerson",
-  "id": "relatedperson-tus-screened-brother",
+  "id": "relatedperson-tus-never-brother",
   "patient": {
-    "reference": "Patient/tus-screened"
+    "reference": "Patient/tus-never"
   },
   "relationship": [
     {

@@ -1,6 +1,6 @@
 {
   "resourceType": "Patient",
-  "id": "tus-too-young",
+  "id": "tus-smoker",
   "extension": [
     {
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
@@ -62,12 +62,12 @@
   "name": [
     {
       "use": "official",
-      "family": "Young",
-      "given": ["Too"]
+      "family": "Smoker",
+      "given": ["Current"]
     }
   ],
   "gender": "male",
-  "birthDate": "2020-01-01",
+  "birthDate": "2000-01-01",
   "telecom": [
     {
       "system": "phone",

@@ -66,8 +66,8 @@
   "name": [
     {
       "use": "official",
-      "family": "Doe",
-      "given": ["John"]
+      "family": "Screened",
+      "given": ["Not"]
     }
   ],
   "gender": "male",
