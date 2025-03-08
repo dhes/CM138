@@ -35,10 +35,10 @@
   "valueCodeableConcept": {
     "coding": [
       {
-				"system": "http://snomed.info/sct",
-				"code": "77176002",
-				"display": "Smoker"
-			}
+        "system": "http://snomed.info/sct",
+        "code": "8517006",
+        "display": "Former smoker"
+      }
     ],
     "text": "Smoker"
   }

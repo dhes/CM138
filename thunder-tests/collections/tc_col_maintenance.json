@@ -10,17 +10,17 @@
             "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
             "containerId": "",
             "name": "general utility",
-            "url": "Patient/tus-screened",
-            "method": "GET",
+            "url": "Observation/tus-smoker-observation-2",
+            "method": "DELETE",
             "sortNum": 10000,
             "created": "2025-01-22T20:06:22.356Z",
-            "modified": "2025-03-08T21:28:48.457Z",
+            "modified": "2025-03-08T22:05:10.070Z",
             "headers": [],
             "body": {
                 "type": "binary",
                 "raw": "",
                 "form": [],
-                "binary": "../input/tests/plandefinition/Smoking/tus-smoker/Observation/observation-tus-smoker.json"
+                "binary": "../input/tests/plandefinition/Smoking/tests-tus-former-bundle.json"
             }
         },
         {
@@ -1318,13 +1318,13 @@
             "method": "POST",
             "sortNum": 830000,
             "created": "2025-03-02T17:34:03.578Z",
-            "modified": "2025-03-02T17:34:54.725Z",
+            "modified": "2025-03-08T21:40:06.928Z",
             "headers": [],
             "body": {
                 "type": "binary",
                 "raw": "",
                 "form": [],
-                "binary": "../bundles/plandefinition/PlanDefinition - smoking/PlanDefinition - smoking-bundle.json"
+                "binary": "../bundles/plandefinition/PlanDefinition-smoking/PlanDefinition-smoking-bundle.json"
             }
         },
         {

@@ -37,7 +37,7 @@
       {
 				"system": "http://snomed.info/sct",
 				"code": "77176002",
-				"display": "Smoker"
+				"display": "Current Smoker"
 			}
     ],
     "text": "Smoker"
