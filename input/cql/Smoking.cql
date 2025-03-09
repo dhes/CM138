@@ -31,8 +31,8 @@ define PatientFullName:
 define "Age":
   AgeInYears()
 
-define "Is18OrOlder":
-  "Age" >= 18
+define "Is12OrOlder":
+  "Age" >= 12
 
 define "StartOfCurrentYear":
   DateTime(year from Today(), 1, 1, 0, 0, 0, 0)
@@ -64,5 +64,5 @@ define "TobaccoUseScreeningNotUpToDate":
   not "HasUpToDateTobaccoUseScreening"
 
   
-define "Is18OrOlderAndDueForTobaccoUseScreening":
-  "Is18OrOlder" and "TobaccoUseScreeningNotUpToDate"
+define "Is12OrOlderAndDueForTobaccoUseScreening":
+  "Is12OrOlder" and "TobaccoUseScreeningNotUpToDate"

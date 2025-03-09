@@ -58,7 +58,7 @@
           "kind": "applicability",
           "expression": {
             "language": "text/cql-identifier",
-            "expression": "Is18OrOlderAndDueForTobaccoUseScreening"
+            "expression": "Is12OrOlderAndDueForTobaccoUseScreening"
           }
         }
       ],
