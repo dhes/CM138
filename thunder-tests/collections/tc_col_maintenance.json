@@ -10,17 +10,24 @@
             "colId": "40fe979b-543c-4fd8-8210-d491f75d344d",
             "containerId": "",
             "name": "general utility",
-            "url": "Observation/tus-smoker-observation-2",
-            "method": "DELETE",
+            "url": "Patient?identifier=http://hospital.smarthealthit.org|",
+            "method": "GET",
             "sortNum": 10000,
             "created": "2025-01-22T20:06:22.356Z",
-            "modified": "2025-03-08T22:05:10.070Z",
+            "modified": "2025-03-10T01:29:36.974Z",
             "headers": [],
+            "params": [
+                {
+                    "name": "identifier",
+                    "value": "http://hospital.smarthealthit.org|",
+                    "isPath": false
+                }
+            ],
             "body": {
                 "type": "binary",
                 "raw": "",
                 "form": [],
-                "binary": "../input/tests/plandefinition/Smoking/tests-tus-former-bundle.json"
+                "binary": "../CMS138FHIR-v0.0.001-FHIR4-TestCases/1a070602-c572-4581-b438-989aaa417e64/CMS138FHIR-v0.0.001-NUM1Pass-TwoVisitsScreenedForTobaccoDuringMP.json"
             }
         },
         {

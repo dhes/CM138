@@ -55,7 +55,7 @@
         ],
         "text": "Medical Record Number"
       },
-      "system": "http://hospital.smarthealthit.org",
+      "system": "http://hopena.info",
       "value": "1032702"
     }
   ],
