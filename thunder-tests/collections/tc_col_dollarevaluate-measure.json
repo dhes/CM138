@@ -1,6 +1,6 @@
 {
     "_id": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
-    "colName": "evaluate-measure",
+    "colName": "$evaluate-measure",
     "created": "2025-01-22T20:18:01.886Z",
     "sortNum": 20000,
     "folders": [],
@@ -10,26 +10,21 @@
             "colId": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
             "containerId": "",
             "name": "evaluate-measure population",
-            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?periodStart=2024-01-01&periodEnd=2024-12-31&report-type=population",
+            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?subject=Patient/tus-former",
             "method": "GET",
             "sortNum": 20000,
             "created": "2025-01-22T20:19:02.675Z",
-            "modified": "2025-01-22T20:27:12.001Z",
-            "headers": [],
+            "modified": "2025-03-10T01:04:50.845Z",
+            "headers": [
+                {
+                    "name": "TimeZone",
+                    "value": "Pacific/Honolulu"
+                }
+            ],
             "params": [
                 {
-                    "name": "periodStart",
-                    "value": "2024-01-01",
-                    "isPath": false
-                },
-                {
-                    "name": "periodEnd",
-                    "value": "2024-12-31",
-                    "isPath": false
-                },
-                {
-                    "name": "report-type",
-                    "value": "population",
+                    "name": "subject",
+                    "value": "Patient/tus-former",
                     "isPath": false
                 }
             ]
@@ -39,11 +34,11 @@
             "colId": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
             "containerId": "",
             "name": "evaluate-measure subject tus-screened",
-            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?periodStart=2024-01-01&periodEnd=2024-12-31&subject=Patient/tus-screened",
+            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?periodStart=2024-01-01&periodEnd=2024-12-31&subject=Patient/tus-smoker",
             "method": "GET",
             "sortNum": 30000,
             "created": "2025-01-23T02:09:47.157Z",
-            "modified": "2025-01-23T02:10:13.859Z",
+            "modified": "2025-03-09T21:51:44.523Z",
             "headers": [],
             "params": [
                 {
@@ -58,7 +53,7 @@
                 },
                 {
                     "name": "subject",
-                    "value": "Patient/tus-screened",
+                    "value": "Patient/tus-smoker",
                     "isPath": false
                 }
             ]
