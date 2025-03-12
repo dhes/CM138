@@ -1,0 +1,32 @@
+{
+  "resourceType": "Procedure",
+  "id": "e9a85103-4ad7-4dca-9be8-eaf6a65bccfe",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+      "valueDateTime": "2025-01-01T01:00:00.000Z"
+    }
+  ],
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "711028002",
+        "display": "Counseling about tobacco use (procedure)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/7c310440-9998-4c89-9e1d-91bff809d537"
+  },
+  "performedPeriod": {
+    "start": "2025-01-01T01:00:00.000Z",
+    "end": "2025-01-01T01:15:00.000Z"
+  }
+}

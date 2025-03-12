@@ -1,0 +1,245 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "e1fc8275-b17e-47f4-923f-7deb21527568",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm"
+    ]
+  },
+  "contained": [
+    {
+      "resourceType": "Parameters",
+      "id": "0aa118bc-ed49-49b3-83fe-c49abf282bb9-parameters",
+      "parameter": [
+        {
+          "name": "subject",
+          "valueString": "6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-inputParameters",
+      "valueReference": {
+        "reference": "#0aa118bc-ed49-49b3-83fe-c49abf282bb9-parameters"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+      "valueMarkdown": "Patient 12 years old with missing code value for Observation retrieve"
+    }
+  ],
+  "modifierExtension": [
+    {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+      "valueBoolean": true
+    }
+  ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR",
+  "period": {
+    "start": "2025-01-01",
+    "end": "2025-12-31"
+  },
+  "group": [
+    {
+      "id": "64e649752ad653247b573add",
+      "population": [
+        {
+          "id": "28241B0C-D672-42A9-8B38-7DF572E218D6",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "203B5345-44CE-4EBA-8DD7-5F609F0FD2B0",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator",
+                "display": "Denominator"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "047764DB-5AFE-4B69-8028-A7EFBBA40EA8",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator-exclusion",
+                "display": "Denominator Exclusion"
+              }
+            ]
+          },
+          "count": 0
+        },
+        {
+          "id": "B21A37CF-F70D-4BBA-8874-34380BE0081F",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator",
+                "display": "Numerator"
+              }
+            ]
+          },
+          "count": 0
+        }
+      ],
+      "measureScore": {
+        "value": 1
+      }
+    },
+    {
+      "id": "64e649752ad653247b573ade",
+      "population": [
+        {
+          "id": "DC7C0370-8196-47FD-A74F-EB496201486E",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "C3799569-0660-4195-B736-131715A6DE00",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator",
+                "display": "Denominator"
+              }
+            ]
+          },
+          "count": 0
+        },
+        {
+          "id": "16246C08-B870-4D23-B533-9887CFC9F368",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator-exclusion",
+                "display": "Denominator Exclusion"
+              }
+            ]
+          },
+          "count": 0
+        },
+        {
+          "id": "C03D54BC-3E09-4927-88E0-12A16C4723A0",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator",
+                "display": "Numerator"
+              }
+            ]
+          },
+          "count": 0
+        }
+      ],
+      "measureScore": {
+        "value": 1
+      }
+    },
+    {
+      "id": "64e649752ad653247b573adf",
+      "population": [
+        {
+          "id": "75229B59-240E-4363-9405-CD7702B189F8",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "initial-population",
+                "display": "Initial Population"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "286FB328-DF1F-41C8-B1CB-F0CA7FA51EC0",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator",
+                "display": "Denominator"
+              }
+            ]
+          },
+          "count": 1
+        },
+        {
+          "id": "D66D5612-9555-47B9-8C82-4ED3F03DBCC6",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "denominator-exclusion",
+                "display": "Denominator Exclusion"
+              }
+            ]
+          },
+          "count": 0
+        },
+        {
+          "id": "7D9B1BDC-EE97-41EE-AE7A-18CF0E24D5C3",
+          "code": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                "code": "numerator",
+                "display": "Numerator"
+              }
+            ]
+          },
+          "count": 0
+        }
+      ],
+      "measureScore": {
+        "value": 1
+      }
+    }
+  ],
+  "evaluatedResource": [
+    {
+      "reference": "Patient/6074ad7e-a5ae-41f1-9bfd-ca04b4e15f8f"
+    },
+    {
+      "reference": "Encounter/0dad46d0-bf01-4e61-95af-c37fc3d65196"
+    },
+    {
+      "reference": "Encounter/00b6dff4-c51f-47f9-8b37-2320f8b9665b"
+    },
+    {
+      "reference": "Observation/969eed6c-f64d-414f-8597-a12286b30139"
+    },
+    {
+      "reference": "MedicationRequest/48c08744-742e-4bee-817c-63c92eb0405c"
+    }
+  ]
+}
