@@ -53,6 +53,7 @@ define function ToQuantity(quantity FHIR.Quantity):
             Message(null, true, 'FHIRHelpers.ToQuantity.ComparatorQuantityNotSupported', 'Error', 'FHIR Quantity value has a comparator and cannot be converted to a System.Quantity value.')
         when quantity.system is null or quantity.system.value = 'http://unitsofmeasure.org'
               or quantity.system.value = 'http://hl7.org/fhirpath/CodeSystem/calendar-units' then
+              // or quantity.system.value = 'http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm' then // proposed by DH
             System.Quantity { value: quantity.value.value, unit: ToCalendarUnit(Coalesce(quantity.code.value, quantity.unit.value, '1')) }
         else
             Message(null, true, 'FHIRHelpers.ToQuantity.InvalidFHIRQuantity', 'Error', 'Invalid FHIR Quantity code: ' & quantity.unit.value & ' (' & quantity.system.value & '|' & quantity.code.value & ')')

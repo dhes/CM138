@@ -137,6 +137,25 @@
                 "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueReference\": {\n        \"reference\": \"Patient/tus-not-screened\"\n      }\n    }\n  ]\n}",
                 "form": []
             }
+        },
+        {
+            "_id": "cafbbaa9-592e-4e0f-b45a-c879986bee7e",
+            "colId": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
+            "containerId": "",
+            "name": "evaluate-measure subject=Patient/{failingPatient}",
+            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?subject=Patient/2412ad6a-fce0-4ad0-b200-737e443e5278",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2025-03-12T04:28:14.606Z",
+            "modified": "2025-03-16T00:50:26.996Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "Patient/2412ad6a-fce0-4ad0-b200-737e443e5278",
+                    "isPath": false
+                }
+            ]
         }
     ],
     "settings": {

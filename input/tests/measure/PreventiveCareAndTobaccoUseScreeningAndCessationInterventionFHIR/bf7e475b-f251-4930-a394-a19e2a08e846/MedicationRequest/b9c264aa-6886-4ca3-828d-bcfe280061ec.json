@@ -28,11 +28,30 @@
     {
       "timing": {
         "repeat": {
-          "boundsPeriod": {
-            "start": "2025-01-01T00:00:00.000Z",
-            "end": "2025-03-31T23:59:59.000Z"
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d",
+          "timeOfDay": ["08:00"]
+        },
+        "doseAndRate": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                  "code": "ordered",
+                  "display": "Ordered"
+                }
+              ]
+            },
+            "doseQuantity": {
+              "value": 450,
+              "unit": "mg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg"
+            }
           }
-        }
+        ]
       }
     }
   ],
