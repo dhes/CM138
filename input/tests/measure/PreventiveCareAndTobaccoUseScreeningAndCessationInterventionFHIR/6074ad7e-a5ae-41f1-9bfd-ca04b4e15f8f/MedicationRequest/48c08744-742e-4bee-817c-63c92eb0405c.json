@@ -32,7 +32,16 @@
           "when": ["MORN", "EVE"]
         }
       },
-      "doseAndRate": [
+			"route": {
+				"coding": [
+					{
+						"system": "http://snomed.info/sct",
+						"code": "26643006",
+						"display": "Oral Route"
+					}
+				]
+			},
+					"doseAndRate": [
         {
           "type": {
             "coding": [
