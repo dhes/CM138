@@ -143,22 +143,15 @@
             "colId": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
             "containerId": "",
             "name": "evaluate-measure subject=Patient/{failingPatient}",
-            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?subject=Patient/bf7e475b-f251-4930-a394-a19e2a08e846",
+            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure",
             "method": "GET",
             "sortNum": 80000,
             "created": "2025-03-12T04:28:14.606Z",
-            "modified": "2025-03-19T22:31:49.670Z",
+            "modified": "2025-03-19T23:01:31.682Z",
             "headers": [
                 {
                     "name": "Timezone",
                     "value": "Z"
-                }
-            ],
-            "params": [
-                {
-                    "name": "subject",
-                    "value": "Patient/bf7e475b-f251-4930-a394-a19e2a08e846",
-                    "isPath": false
                 }
             ]
         }
