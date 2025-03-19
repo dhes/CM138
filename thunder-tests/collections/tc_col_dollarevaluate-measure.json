@@ -143,16 +143,31 @@
             "colId": "9e0cbaea-e361-4901-bd32-01c90c06df1d",
             "containerId": "",
             "name": "evaluate-measure subject=Patient/{failingPatient}",
-            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?subject=Patient/2412ad6a-fce0-4ad0-b200-737e443e5278",
+            "url": "Measure/PreventiveCareAndTobaccoUseScreeningAndCessationInterventionFHIR/$evaluate-measure?subject=Patient/73d69a14-7e70-4c9f-89e3-62da4a370fd3&periodStart=2025&periodEnd=2025",
             "method": "GET",
             "sortNum": 80000,
             "created": "2025-03-12T04:28:14.606Z",
-            "modified": "2025-03-16T00:50:26.996Z",
-            "headers": [],
+            "modified": "2025-03-19T19:48:17.239Z",
+            "headers": [
+                {
+                    "name": "Timezone",
+                    "value": "Z"
+                }
+            ],
             "params": [
                 {
                     "name": "subject",
-                    "value": "Patient/2412ad6a-fce0-4ad0-b200-737e443e5278",
+                    "value": "Patient/73d69a14-7e70-4c9f-89e3-62da4a370fd3",
+                    "isPath": false
+                },
+                {
+                    "name": "periodStart",
+                    "value": "2025",
+                    "isPath": false
+                },
+                {
+                    "name": "periodEnd",
+                    "value": "2025",
                     "isPath": false
                 }
             ]
@@ -163,6 +178,10 @@
             {
                 "name": "Content-Type",
                 "value": "application/fhir+json"
+            },
+            {
+                "name": "Timezone",
+                "value": "Z"
             }
         ],
         "options": {
